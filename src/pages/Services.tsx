@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Zap, Shield, Drill, Waves, Hammer, Leaf, Droplets, Globe, Search, Database } from "lucide-react";
+import { Zap, Shield, Drill, Waves, Hammer, Leaf, Droplets, Earth, FlaskConical, Database } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -23,7 +23,7 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80"
     },
     {
-      icon: <Globe className="h-6 w-6" />,
+      icon: <Earth className="h-6 w-6" />,
       title: "Integrated Geoscience",
       description: "Comprehensive geoscience solutions combining geological, geophysical, and geochemical analysis for complete subsurface understanding.",
       details: [
@@ -35,7 +35,7 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80"
     },
     {
-      icon: <Search className="h-6 w-6" />,
+      icon: <FlaskConical className="h-6 w-6" />,
       title: "Hydrogeological Investigation",
       description: "Detailed hydrogeological studies to understand groundwater systems, flow patterns, and aquifer characteristics.",
       details: [

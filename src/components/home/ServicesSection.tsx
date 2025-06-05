@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Zap, Drill, ArrowRight, Droplets, Globe, Search, Database } from "lucide-react";
+import { Shield, Zap, Drill, ArrowRight, Droplets, Earth, FlaskConical, Database } from "lucide-react";
 import OptimizedImage from "@/components/OptimizedImage";
 import { Link } from "react-router-dom";
 
@@ -16,13 +16,13 @@ const ServicesSection = () => {
       image: "/assets/images/geotechnical-investigation.jpg"
     },
     {
-      icon: <Globe className="h-6 w-6" />,
+      icon: <Earth className="h-6 w-6" />,
       title: "Integrated Geoscience",
       description: "Comprehensive geoscience solutions combining geological, geophysical, and geochemical analysis for complete subsurface understanding.",
       image: "/assets/images/electrical-earthing.jpg"
     },
     {
-      icon: <Search className="h-6 w-6" />,
+      icon: <FlaskConical className="h-6 w-6" />,
       title: "Hydrogeological Investigation",
       description: "Detailed hydrogeological studies to understand groundwater systems, flow patterns, and aquifer characteristics.",
       image: "/assets/images/cathodic-protection.jpg"
