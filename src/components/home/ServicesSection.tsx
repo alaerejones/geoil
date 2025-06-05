@@ -1,12 +1,17 @@
-import React from "react";
+
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Zap, Drill, ArrowRight, Droplets, Earth, FlaskConical, Database } from "lucide-react";
 import OptimizedImage from "@/components/OptimizedImage";
+import ServiceDetailsModal from "@/components/ServiceDetailsModal";
 import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const services = [
     {
       icon: <Droplets className="h-6 w-6" />,
@@ -52,6 +57,16 @@ const ServicesSection = () => {
     }
   ];
 
+  const handleLearnMore = (service: any) => {
+    setSelectedService(service);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedService(null);
+  };
+
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,7 +93,11 @@ const ServicesSection = () => {
               <CardContent className="p-8">
                 <h3 className="text-xl font-bold text-slate-900 mb-4">{service.title}</h3>
                 <p className="text-base text-slate-600 mb-6 leading-relaxed">{service.description}</p>
-                <Button variant="outline" className="group-hover:bg-red-600 group-hover:text-white transition-all duration-300 text-sm">
+                <Button 
+                  variant="outline" 
+                  className="group-hover:bg-red-600 group-hover:text-white transition-all duration-300 text-sm"
+                  onClick={() => handleLearnMore(service)}
+                >
                   Learn More
                 </Button>
               </CardContent>
@@ -95,6 +114,12 @@ const ServicesSection = () => {
           </Button>
         </div>
       </div>
+
+      <ServiceDetailsModal 
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        service={selectedService}
+      />
     </section>
   );
 };
