@@ -8,8 +8,8 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  const handleContactClick = () => {
-    navigate('/contact');
+  const handleNavigation = (path: string) => {
+    navigate(path);
     window.scrollTo(0, 0);
     setIsMenuOpen(false);
   };
@@ -24,11 +24,11 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-slate-700 hover:text-red-600 transition-colors">Home</Link>
-            <Link to="/about" className="text-slate-700 hover:text-red-600 transition-colors">About</Link>
-            <Link to="/services" className="text-slate-700 hover:text-red-600 transition-colors">Services</Link>
-            <Link to="/projects" className="text-slate-700 hover:text-red-600 transition-colors">Projects</Link>
-            <button onClick={handleContactClick} className="text-slate-700 hover:text-red-600 transition-colors">Contact</button>
+            <button onClick={() => handleNavigation('/')} className="text-slate-700 hover:text-red-600 transition-colors">Home</button>
+            <button onClick={() => handleNavigation('/about')} className="text-slate-700 hover:text-red-600 transition-colors">About</button>
+            <button onClick={() => handleNavigation('/services')} className="text-slate-700 hover:text-red-600 transition-colors">Services</button>
+            <button onClick={() => handleNavigation('/projects')} className="text-slate-700 hover:text-red-600 transition-colors">Projects</button>
+            <button onClick={() => handleNavigation('/contact')} className="text-slate-700 hover:text-red-600 transition-colors">Contact</button>
           </div>
           
           <div className="flex items-center space-x-4">
@@ -56,11 +56,11 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              <Link to="/" className="block px-3 py-2 text-slate-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>Home</Link>
-              <Link to="/about" className="block px-3 py-2 text-slate-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>About</Link>
-              <Link to="/services" className="block px-3 py-2 text-slate-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>Services</Link>
-              <Link to="/projects" className="block px-3 py-2 text-slate-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>Projects</Link>
-              <button onClick={handleContactClick} className="block w-full text-left px-3 py-2 text-slate-700 hover:text-red-600">Contact</button>
+              <button onClick={() => handleNavigation('/')} className="block w-full text-left px-3 py-2 text-slate-700 hover:text-red-600">Home</button>
+              <button onClick={() => handleNavigation('/about')} className="block w-full text-left px-3 py-2 text-slate-700 hover:text-red-600">About</button>
+              <button onClick={() => handleNavigation('/services')} className="block w-full text-left px-3 py-2 text-slate-700 hover:text-red-600">Services</button>
+              <button onClick={() => handleNavigation('/projects')} className="block w-full text-left px-3 py-2 text-slate-700 hover:text-red-600">Projects</button>
+              <button onClick={() => handleNavigation('/contact')} className="block w-full text-left px-3 py-2 text-slate-700 hover:text-red-600">Contact</button>
             </div>
           </div>
         )}
