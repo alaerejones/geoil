@@ -11,7 +11,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center pt-20">
       <div className="absolute inset-0">
         <OptimizedImage 
-          src="/assets/images/hero-bg.png" 
+          src="/lovable-uploads/59f0b476-c26b-420a-a0d6-4ccc0d0b2d2e.png" 
           alt="Geogreatotechnics Team at Work - Drilling Operations" 
           className="w-full h-full" 
           loading="eager" 
