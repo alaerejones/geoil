@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const Footer = () => {
   return (
@@ -8,10 +9,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center">
-              <img 
+              <OptimizedImage 
                 src="/lovable-uploads/05e99988-5d95-4837-ada7-c15edb9f9ec1.png" 
                 alt="Logo" 
-                className="h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36 object-contain" 
+                className="h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36 object-contain"
+                loading="lazy"
               />
             </div>
             <p className="text-slate-400 text-sm -mt-6">

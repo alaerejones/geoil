@@ -6,6 +6,7 @@ import { Zap, Shield, Drill, Waves, Hammer, Leaf } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const Services = () => {
   const services = [
@@ -91,10 +92,11 @@ const Services = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">
         <div className="absolute inset-0">
-          <img 
+          <OptimizedImage 
             src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1920&q=80" 
             alt="Engineering Services" 
-            className="w-full h-full object-cover"
+            className="w-full h-full"
+            loading="eager"
           />
           <div className="absolute inset-0 bg-slate-900/70"></div>
         </div>
@@ -133,7 +135,7 @@ const Services = () => {
                   </ul>
                 </div>
                 <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <img 
+                  <OptimizedImage 
                     src={service.image} 
                     alt={service.title} 
                     className="w-full h-96 object-cover rounded-lg shadow-lg"
