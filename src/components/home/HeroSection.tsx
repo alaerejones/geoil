@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -10,7 +11,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center pt-20">
       <div className="absolute inset-0">
         <OptimizedImage 
-          src="/lovable-uploads/59f0b476-c26b-420a-a0d6-4ccc0d0b2d2e.png" 
+          src="/assets/images/hero-bg.png" 
           alt="Geogreatotechnics Team at Work - Drilling Operations" 
           className="w-full h-full" 
           loading="eager" 
@@ -27,7 +28,7 @@ const HeroSection = () => {
         
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">Welcome to GEOGREATOTECHNICS &amp; GEODREELS LTD</h1>
         
-        <p className="text-lg text-slate-200 mb-10 max-w-3xl mx-auto leading-relaxed">Leading the way in geotechnical engineering, environmental consulting services, and more. Providing reliable, professional, and innovative solutions across Nigeria's oil, energy, and infrastructure sectors.</p>
+        <p className="text-lg text-slate-200 mb-10 max-w-3xl mx-auto leading-relaxed">Trusted Partner for Industrial Water Drilling, Integrated Geoscience, Hydrogeological Investigation, Sustainable Energy, Engineering, Pipeline Asset Management, Environmental and Consulting Solutions — Delivering Innovative and Sustainable Services, and More</p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
