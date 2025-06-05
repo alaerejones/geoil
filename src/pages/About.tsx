@@ -2,207 +2,158 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Users, Award, Target, Eye } from "lucide-react";
+import { Users, Target, Award, CheckCircle, ArrowRight, Shield, Zap, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const About = () => {
-  const team = [
+  const values = [
     {
-      name: "Engr. Segun Falodun",
-      role: "Managing Director",
-      credentials: "mnmgs, c.engr, comeg, MSc.",
-      bio: "An astute engineer and geoscientist with over 23 years of experience, leading numerous large-scale projects across Nigeria and West Africa.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+      icon: <Shield className="h-6 w-6" />,
+      title: "Integrity",
+      description: "We uphold the highest standards of integrity in all of our actions."
     },
     {
-      name: "Dave Adoye",
-      role: "Geophysics & Water Resources Manager",
-      bio: "Leads the Geophysics and Water Resources unit with over 17 years of field experience and expertise in solar water projects.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+      icon: <Target className="h-6 w-6" />,
+      title: "Excellence",
+      description: "We pursue excellence in every project, delivering superior quality solutions."
     },
     {
-      name: "Ochieze Kessington Obinna",
-      role: "Head of Projects & Structural Engineering",
-      bio: "Seasoned civil/structural engineer with over 25 years of experience in project management and construction.",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80"
+      icon: <Users className="h-6 w-6" />,
+      title: "Teamwork",
+      description: "We collaborate effectively to achieve common goals and shared success."
     },
     {
-      name: "Jones-Ere Alaere",
-      role: "Business Development Manager",
-      bio: "Technology strategist and entrepreneur bridging business and digital transformation in energy and engineering sectors.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616c9e0c213?auto=format&fit=crop&w=400&q=80"
+      icon: <Zap className="h-6 w-6" />,
+      title: "Innovation",
+      description: "We embrace innovation to stay ahead in the rapidly evolving engineering landscape."
     }
   ];
 
-  const timeline = [
-    {
-      year: "2008",
-      title: "Company Incorporation",
-      description: "Geogreatotechnics & Geodreels Ltd was officially incorporated."
-    },
-    {
-      year: "2012",
-      title: "WAGP Project Milestone",
-      description: "Successfully completed major West African Gas Pipeline project."
-    },
-    {
-      year: "2017",
-      title: "World Bank Water Project",
-      description: "Executed significant World Bank assisted water scheme project."
-    },
-    {
-      year: "2023",
-      title: "Prime Port Electrical Earthing",
-      description: "Completed advanced electrical earthing system for Prime Port Logistics."
-    }
+  const achievements = [
+    { number: "15+", label: "Years of Experience", icon: <Clock className="h-5 w-5" /> },
+    { number: "200+", label: "Projects Completed", icon: <CheckCircle className="h-5 w-5" /> },
+    { number: "50+", label: "Major Clients", icon: <Users className="h-5 w-5" /> },
+    { number: "100%", label: "Safety Record", icon: <Shield className="h-5 w-5" /> }
   ];
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead 
+        title="About Us"
+        description="Learn about GGL's 15+ years of expertise in geotechnical engineering and environmental consulting across West Africa. Our commitment to integrity, excellence, and innovation."
+        keywords="about GGL, geotechnical engineering company, environmental consulting Nigeria, engineering expertise West Africa"
+      />
+      
       <Navigation />
       <ScrollToTop />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">
         <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1920&q=80" 
-            alt="Engineering Excellence" 
-            className="w-full h-full object-cover"
+          <OptimizedImage 
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80" 
+            alt="About GGL Engineering Team" 
+            className="w-full h-full"
+            loading="eager"
           />
           <div className="absolute inset-0 bg-slate-900/70"></div>
         </div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">About GGL</h1>
-          <p className="text-xl md:text-2xl text-slate-200">
-            Leading the way in geotechnical engineering and environmental consulting services across West Africa since 2008.
+          <Badge className="bg-red-600 text-white mb-8 text-sm font-medium px-4 py-2 shadow-lg">
+            About GGL
+          </Badge>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Who We Are</h1>
+          <p className="text-lg text-slate-200 max-w-3xl mx-auto leading-relaxed">
+            A leading geotechnical engineering and environmental consulting company with over 15 years of proven expertise across West Africa.
           </p>
         </div>
       </section>
 
       {/* Company Overview */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">Our Story</h2>
-              <p className="text-lg text-slate-600 mb-6">
-                Geogreatotechnics & Geodreels Ltd (GGL) is a growing indigenous company incorporated in 2008, 
-                building on the successful foundation of Geodreels Engineering Services. We have been providing 
-                comprehensive services to the Oil and Gas Industries, Construction, Power, Environmental, 
-                Government, Telecommunication and Engineering companies.
+              <Badge className="bg-slate-100 text-slate-700 mb-4 text-sm font-medium px-4 py-2">Our Story</Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                Engineering Excellence Since 2009
+              </h2>
+              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                GGL was founded with a vision to provide world-class geotechnical engineering and environmental consulting services across West Africa. Over the years, we have established ourselves as a trusted partner for major oil & gas companies, construction firms, and government agencies.
               </p>
-              <p className="text-lg text-slate-600 mb-6">
-                We have completed numerous direct and sub-contract projects for major clients including SHELL, 
-                CHEVRON, TOTAL E&P, AGIP, SPDC, SAIPEM, DAEWOO, and many others. Our expertise extends to 
-                World Bank assisted water schemes and community development projects.
+              <p className="text-base text-slate-600 mb-8 leading-relaxed">
+                Our commitment to technical excellence, safety, and environmental stewardship has earned us recognition as one of the region's premier engineering consultancies.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Badge className="bg-red-600 text-white px-4 py-2">15+ Years Experience</Badge>
-                <Badge className="bg-slate-600 text-white px-4 py-2">200+ Projects</Badge>
-                <Badge className="bg-green-600 text-white px-4 py-2">50+ Major Clients</Badge>
-              </div>
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-8 py-4">
+                <a href="https://wa.me/2348034003089" className="flex items-center space-x-2">
+                  <span>Contact Us</span>
+                  <ArrowRight className="h-5 w-5" />
+                </a>
+              </Button>
             </div>
             <div>
-              <img 
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" 
-                alt="Engineering Team at Work" 
-                className="w-full h-96 object-cover rounded-lg shadow-lg"
+              <OptimizedImage 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
+                alt="GGL Engineering Projects" 
+                className="w-full h-96 rounded-lg shadow-lg"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Vision & Mission */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            <Card className="bg-white shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="bg-red-600 text-white p-3 rounded-full mr-4">
-                    <Eye className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900">Our Vision</h3>
-                </div>
-                <p className="text-lg text-slate-600">
-                  To become one of the foremost companies of integrity in West African Sub region 
-                  servicing oil and gas companies in our areas of specialization.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="bg-red-600 text-white p-3 rounded-full mr-4">
-                    <Target className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900">Our Mission</h3>
-                </div>
-                <p className="text-lg text-slate-600">
-                  To become one of the leading companies providing first class services, especially in 
-                  Corrosion mitigation, electrical, geotechnical, geophysical, dredging, construction, 
-                  environmental and subsurface engineering.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-20 bg-white">
+      {/* Achievements */}
+      <section className="py-20 bg-gradient-to-r from-slate-50 to-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Journey</h2>
-            <p className="text-xl text-slate-600">Key milestones in our company's growth</p>
+            <Badge className="bg-red-100 text-red-700 mb-4 text-sm font-medium px-4 py-2">Our Achievements</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Numbers That Speak</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              A track record of excellence spanning over a decade of operations
+            </p>
           </div>
-
-          <div className="space-y-8">
-            {timeline.map((item, index) => (
-              <div key={index} className="flex items-center space-x-8">
-                <div className="flex-shrink-0">
-                  <div className="bg-red-600 text-white text-xl font-bold w-20 h-20 rounded-full flex items-center justify-center">
-                    {item.year}
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {achievements.map((achievement, index) => (
+              <div key={index} className="text-center group">
+                <div className="flex justify-center mb-6">
+                  <div className="bg-red-600 text-white p-4 rounded-full shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+                    {achievement.icon}
                   </div>
                 </div>
-                <div className="flex-grow">
-                  <h3 className="text-xl font-semibold text-slate-900 mb-2">{item.title}</h3>
-                  <p className="text-slate-600">{item.description}</p>
-                </div>
+                <div className="text-3xl font-bold text-slate-900 mb-2">{achievement.number}</div>
+                <div className="text-sm font-medium text-slate-600">{achievement.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-slate-50">
+      {/* Values */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Leadership Team</h2>
-            <p className="text-xl text-slate-600">Meet the experts driving our success</p>
+          <div className="text-center mb-20">
+            <Badge className="bg-slate-100 text-slate-700 mb-4 text-sm font-medium px-4 py-2">Our Values</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">What Drives Us</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Our core values guide every decision we make and every project we undertake
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
-                <div className="aspect-square relative overflow-hidden">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-slate-900 mb-1">{member.name}</h3>
-                  {member.credentials && (
-                    <p className="text-sm text-red-600 mb-2">{member.credentials}</p>
-                  )}
-                  <p className="text-sm font-semibold text-slate-700 mb-3">{member.role}</p>
-                  <p className="text-sm text-slate-600">{member.bio}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+            {values.map((value, index) => (
+              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+                <CardContent className="p-8">
+                  <div className="bg-red-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    {value.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold mb-4 text-slate-900">{value.title}</h3>
+                  <p className="text-base text-slate-600 leading-relaxed">{value.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -210,21 +161,50 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-slate-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Partner with Industry Leaders</h2>
-          <p className="text-xl text-slate-300 mb-8">
-            Join our growing list of satisfied clients and experience the GGL difference.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
-              <a href="https://wa.me/2348034003089">Get Started</a>
-            </Button>
-            <Button size="lg" variant="outline" className="border-white bg-white text-black hover:bg-gray-100 hover:text-black">
-              <Link to="/projects">View Our Projects</Link>
-            </Button>
+      {/* Mission & Vision */}
+      <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16">
+            <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+              <CardContent className="p-10">
+                <div className="bg-red-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
+                  <Target className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-6">Our Mission</h3>
+                <p className="text-base text-slate-600 leading-relaxed">
+                  To provide innovative, reliable, and sustainable geotechnical engineering and environmental consulting services that exceed client expectations while contributing to the development of West Africa's infrastructure and energy sectors.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+              <CardContent className="p-10">
+                <div className="bg-red-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
+                  <Award className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-6">Our Vision</h3>
+                <p className="text-base text-slate-600 leading-relaxed">
+                  To be the premier geotechnical engineering and environmental consulting firm in West Africa, recognized for our technical excellence, innovation, and commitment to sustainable development practices.
+                </p>
+              </CardContent>
+            </Card>
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Work With Us?</h2>
+          <p className="text-lg text-slate-300 mb-12 leading-relaxed">
+            Partner with GGL for your next engineering project and experience the difference that expertise makes.
+          </p>
+          <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-10 py-6 shadow-2xl hover:shadow-red-600/25 transition-all duration-300 transform hover:scale-105">
+            <a href="https://wa.me/2348034003089" className="flex items-center space-x-3">
+              <span>Start Your Project</span>
+              <ArrowRight className="h-5 w-5" />
+            </a>
+          </Button>
         </div>
       </section>
 

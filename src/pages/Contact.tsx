@@ -1,196 +1,291 @@
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, MessageSquare } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import SEOHead from "@/components/SEOHead";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const Contact = () => {
-  const offices = [
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    service: "",
+    message: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const whatsappMessage = `Hello! I'm interested in your services.\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCompany: ${formData.company}\nService: ${formData.service}\nMessage: ${formData.message}`;
+    const whatsappUrl = `https://wa.me/2348034003089?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const contactInfo = [
     {
-      city: "Port Harcourt (Headquarters)",
-      address: "#4 Daba Avenue, Off Airforce Road, Eliozu, Port Harcourt",
-      secondary: "Plot 24 Trans-Amadi Industrial Layout (Apex Eastern Yard)"
+      icon: <Phone className="h-6 w-6" />,
+      title: "Phone",
+      details: ["+234 803 400 3089", "+234 708 765 4321"],
+      action: "Call Us"
     },
     {
-      city: "Lagos",
-      address: "14 Talabi Street, Adeniyi Jones, Ikeja, Lagos State"
+      icon: <Mail className="h-6 w-6" />,
+      title: "Email",
+      details: ["info@ggl-ng.com", "projects@ggl-ng.com"],
+      action: "Email Us"
     },
     {
-      city: "Abuja",
-      address: "Suit 21, Cherry Plaza, Behind Eternal Filling Station, Utako, Abuja"
+      icon: <MapPin className="h-6 w-6" />,
+      title: "Address",
+      details: ["Lagos Office:", "Victoria Island, Lagos, Nigeria"],
+      action: "Get Directions"
+    },
+    {
+      icon: <Clock className="h-6 w-6" />,
+      title: "Business Hours",
+      details: ["Monday - Friday: 8:00 AM - 6:00 PM", "Saturday: 9:00 AM - 2:00 PM"],
+      action: "Schedule Meeting"
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead 
+        title="Contact Us"
+        description="Get in touch with GGL for your geotechnical engineering and environmental consulting needs. Contact us via phone, email, or visit our Lagos office."
+        keywords="contact GGL, geotechnical engineering contact Nigeria, environmental consulting contact, engineering services Lagos"
+      />
+      
       <Navigation />
       <ScrollToTop />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">
         <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80" 
-            alt="Contact Us" 
-            className="w-full h-full object-cover"
+          <OptimizedImage 
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" 
+            alt="Contact GGL Engineering" 
+            className="w-full h-full"
+            loading="eager"
           />
           <div className="absolute inset-0 bg-slate-900/70"></div>
         </div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl md:text-2xl text-slate-200">
-            Get in touch with our engineering experts for your next project.
+          <Badge className="bg-red-600 text-white mb-8 text-sm font-medium px-4 py-2 shadow-lg">
+            Get In Touch
+          </Badge>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Contact Us</h1>
+          <p className="text-lg text-slate-200 max-w-3xl mx-auto leading-relaxed">
+            Ready to discuss your project? Get in touch with our expert team for professional consultation and competitive quotes.
           </p>
         </div>
       </section>
 
       {/* Contact Information */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-gradient-to-r from-slate-50 to-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <Card className="shadow-lg">
-              <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-slate-900 mb-6">Send us a Message</h2>
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">First Name</label>
-                      <Input placeholder="Your first name" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">Last Name</label>
-                      <Input placeholder="Your last name" />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">Email</label>
-                    <Input type="email" placeholder="your.email@example.com" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">Phone</label>
-                    <Input type="tel" placeholder="+234 800 000 0000" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">Service Interest</label>
-                    <select className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
-                      <option>Select a service</option>
-                      <option>Electrical Earthing</option>
-                      <option>Cathodic Protection</option>
-                      <option>Geotechnical Investigation</option>
-                      <option>Water Drilling & Solar</option>
-                      <option>Environmental Services</option>
-                      <option>Civil Construction</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">Message</label>
-                    <Textarea rows={4} placeholder="Tell us about your project requirements..." />
-                  </div>
-                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+          <div className="text-center mb-20">
+            <Badge className="bg-slate-100 text-slate-700 mb-4 text-sm font-medium px-4 py-2">Contact Information</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">How to Reach Us</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Multiple ways to connect with our team for your engineering needs
+            </p>
+          </div>
 
-            {/* Contact Details */}
-            <div className="space-y-8">
-              <Card className="shadow-lg">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {contactInfo.map((info, index) => (
+              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-6">Quick Contact</h3>
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-red-600 text-white p-3 rounded-full">
-                        <Phone className="h-6 w-6" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-slate-900">Phone Numbers</h4>
-                        <div className="text-slate-600">
-                          <a href="tel:+2348034003089" className="hover:text-red-600 transition-colors">08034003089</a>
-                          <br />
-                          <a href="tel:+2347051189594" className="hover:text-red-600 transition-colors">07051189594</a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-red-600 text-white p-3 rounded-full">
-                        <Mail className="h-6 w-6" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-slate-900">Email Addresses</h4>
-                        <div className="text-slate-600">
-                          <a href="mailto:geogreatotechnics@gmail.com" className="hover:text-red-600 transition-colors">
-                            geogreatotechnics@gmail.com
-                          </a>
-                          <br />
-                          <a href="mailto:geogreatotechnics@yahoo.com" className="hover:text-red-600 transition-colors">
-                            geogreatotechnics@yahoo.com
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-red-600 text-white p-3 rounded-full">
-                        <Clock className="h-6 w-6" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-slate-900">Business Hours</h4>
-                        <div className="text-slate-600">
-                          Monday - Friday: 8:00 AM - 6:00 PM<br />
-                          Saturday: 9:00 AM - 4:00 PM<br />
-                          Sunday: Emergency calls only
-                        </div>
-                      </div>
-                    </div>
+                  <div className="bg-red-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    {info.icon}
                   </div>
-
-                  <div className="mt-8">
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
-                      <a href="https://wa.me/2348034003089" className="flex items-center justify-center space-x-2">
-                        <span>WhatsApp Direct</span>
-                      </a>
-                    </Button>
+                  <h3 className="text-lg font-semibold mb-4 text-slate-900">{info.title}</h3>
+                  <div className="space-y-2 mb-6">
+                    {info.details.map((detail, idx) => (
+                      <p key={idx} className="text-base text-slate-600">{detail}</p>
+                    ))}
                   </div>
+                  <Button variant="outline" className="hover:bg-red-600 hover:text-white transition-all duration-300 text-sm">
+                    {info.action}
+                  </Button>
                 </CardContent>
               </Card>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Office Locations */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Contact Form */}
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Office Locations</h2>
-            <p className="text-xl text-slate-600">Find us across Nigeria's major business centers</p>
+            <Badge className="bg-red-100 text-red-700 mb-4 text-sm font-medium px-4 py-2">Send Message</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Get a Quote</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Fill out the form below and we'll get back to you within 24 hours
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {offices.map((office, index) => (
-              <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="bg-red-600 text-white p-2 rounded-full">
-                      <MapPin className="h-5 w-5" />
-                    </div>
-                    <h3 className="text-lg font-bold text-slate-900">{office.city}</h3>
+          <Card className="shadow-2xl border-0">
+            <CardContent className="p-10">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-base font-medium text-slate-700 mb-2">
+                      Full Name *
+                    </label>
+                    <Input
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full text-base"
+                      placeholder="Your full name"
+                    />
                   </div>
-                  <p className="text-slate-600 mb-2">{office.address}</p>
-                  {office.secondary && (
-                    <p className="text-slate-500 text-sm">{office.secondary}</p>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
+                  <div>
+                    <label htmlFor="email" className="block text-base font-medium text-slate-700 mb-2">
+                      Email Address *
+                    </label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full text-base"
+                      placeholder="your.email@company.com"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="phone" className="block text-base font-medium text-slate-700 mb-2">
+                      Phone Number
+                    </label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full text-base"
+                      placeholder="+234 XXX XXX XXXX"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="company" className="block text-base font-medium text-slate-700 mb-2">
+                      Company Name
+                    </label>
+                    <Input
+                      id="company"
+                      name="company"
+                      type="text"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full text-base"
+                      placeholder="Your company name"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="service" className="block text-base font-medium text-slate-700 mb-2">
+                    Service Required
+                  </label>
+                  <Input
+                    id="service"
+                    name="service"
+                    type="text"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    className="w-full text-base"
+                    placeholder="e.g., Electrical Earthing, Cathodic Protection, etc."
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-base font-medium text-slate-700 mb-2">
+                    Project Details *
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    required
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows={6}
+                    className="w-full text-base resize-none"
+                    placeholder="Please describe your project requirements, timeline, and any specific needs..."
+                  />
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 pt-6">
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="bg-red-600 hover:bg-red-700 text-white text-base px-8 py-4 flex-1"
+                  >
+                    <Send className="h-5 w-5 mr-2" />
+                    Send via WhatsApp
+                  </Button>
+                  <Button 
+                    type="button" 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white text-base px-8 py-4"
+                    onClick={() => window.open('https://wa.me/2348034003089', '_blank')}
+                  >
+                    <MessageSquare className="h-5 w-5 mr-2" />
+                    Quick Chat
+                  </Button>
+                </div>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Emergency Contact */}
+      <section className="py-24 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">Need Immediate Assistance?</h2>
+          <p className="text-lg text-slate-300 mb-12 leading-relaxed">
+            For urgent engineering support or emergency consultations, contact us directly.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-8 py-4">
+              <a href="tel:+2348034003089" className="flex items-center space-x-2">
+                <Phone className="h-5 w-5" />
+                <span>Call Emergency Line</span>
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" className="border-white bg-white/10 text-white hover:bg-white hover:text-slate-900 text-base px-8 py-4 backdrop-blur-sm">
+              <a href="https://wa.me/2348034003089" className="flex items-center space-x-2">
+                <MessageSquare className="h-5 w-5" />
+                <span>WhatsApp Now</span>
+              </a>
+            </Button>
           </div>
         </div>
       </section>
