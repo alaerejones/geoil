@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -80,8 +81,12 @@ const ServicesSection = () => {
         <div className="grid lg:grid-cols-3 gap-10 mb-16">
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg overflow-hidden">
-              <div className="aspect-video relative">
-                <OptimizedImage src={service.image} alt={service.title} className="w-full h-full" />
+              <div className={`relative ${service.title === "Hydrogeological Investigation" ? "aspect-[4/3]" : "aspect-video"}`}>
+                <OptimizedImage 
+                  src={service.image} 
+                  alt={service.title} 
+                  className={`w-full h-full ${service.title === "Hydrogeological Investigation" ? "object-cover object-top" : "object-cover"}`}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                   <div className="bg-red-600 p-3 rounded-full">
