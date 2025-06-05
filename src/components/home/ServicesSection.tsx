@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -29,7 +28,7 @@ const ServicesSection = () => {
       icon: <FlaskConical className="h-6 w-6" />,
       title: "Hydrogeological Investigation",
       description: "Detailed hydrogeological studies to understand groundwater systems, flow patterns, and aquifer characteristics.",
-      image: "/assets/images/cathodic-protection.jpg"
+      image: "/lovable-uploads/fb6c55b7-e749-4289-bd8c-c9fae76017e8.png"
     },
     {
       icon: <Database className="h-6 w-6" />,

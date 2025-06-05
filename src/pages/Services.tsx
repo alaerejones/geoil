@@ -43,7 +43,7 @@ const Services = () => {
         "Hydrogeological modeling",
         "Water resource assessment"
       ],
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/fb6c55b7-e749-4289-bd8c-c9fae76017e8.png"
     },
     {
       icon: <Database className="h-6 w-6" />,
