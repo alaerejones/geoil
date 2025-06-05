@@ -1,11 +1,18 @@
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/contact');
+    window.scrollTo(0, 0);
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-slate-200 z-50">
@@ -21,7 +28,7 @@ const Navigation = () => {
             <Link to="/about" className="text-slate-700 hover:text-red-600 transition-colors">About</Link>
             <Link to="/services" className="text-slate-700 hover:text-red-600 transition-colors">Services</Link>
             <Link to="/projects" className="text-slate-700 hover:text-red-600 transition-colors">Projects</Link>
-            <Link to="/contact" className="text-slate-700 hover:text-red-600 transition-colors">Contact</Link>
+            <button onClick={handleContactClick} className="text-slate-700 hover:text-red-600 transition-colors">Contact</button>
           </div>
           
           <div className="flex items-center space-x-4">
@@ -49,11 +56,11 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              <Link to="/" className="block px-3 py-2 text-slate-700 hover:text-red-600">Home</Link>
-              <Link to="/about" className="block px-3 py-2 text-slate-700 hover:text-red-600">About</Link>
-              <Link to="/services" className="block px-3 py-2 text-slate-700 hover:text-red-600">Services</Link>
-              <Link to="/projects" className="block px-3 py-2 text-slate-700 hover:text-red-600">Projects</Link>
-              <Link to="/contact" className="block px-3 py-2 text-slate-700 hover:text-red-600">Contact</Link>
+              <Link to="/" className="block px-3 py-2 text-slate-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>Home</Link>
+              <Link to="/about" className="block px-3 py-2 text-slate-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>About</Link>
+              <Link to="/services" className="block px-3 py-2 text-slate-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>Services</Link>
+              <Link to="/projects" className="block px-3 py-2 text-slate-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>Projects</Link>
+              <button onClick={handleContactClick} className="block w-full text-left px-3 py-2 text-slate-700 hover:text-red-600">Contact</button>
             </div>
           </div>
         )}

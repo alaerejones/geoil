@@ -9,7 +9,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 const Services = () => {
   const services = [
     {
-      icon: <Zap className="h-8 w-8" />,
+      icon: <Zap className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" />,
       title: "Electrical Earthing",
       description: "Comprehensive electrical earthing services to ensure the safety and operational integrity of electrical installations.",
       details: [
@@ -21,7 +21,7 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=800&q=80"
     },
     {
-      icon: <Shield className="h-8 w-8" />,
+      icon: <Shield className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" />,
       title: "Pipeline Cathodic Protection",
       description: "Advanced cathodic protection systems that safeguard pipelines and structures from corrosion.",
       details: [
@@ -33,7 +33,7 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80"
     },
     {
-      icon: <Drill className="h-8 w-8" />,
+      icon: <Drill className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" />,
       title: "Geophysical & Geotechnical Investigation",
       description: "Deep insights into subsurface conditions through advanced geophysical and geotechnical analysis.",
       details: [
@@ -45,7 +45,7 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80"
     },
     {
-      icon: <Waves className="h-8 w-8" />,
+      icon: <Waves className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" />,
       title: "Water Drilling & Solar Systems",
       description: "Sustainable water supply solutions with solar-powered borehole systems.",
       details: [
@@ -57,7 +57,7 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80"
     },
     {
-      icon: <Hammer className="h-8 w-8" />,
+      icon: <Hammer className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" />,
       title: "Civil Construction & Piling",
       description: "Comprehensive civil engineering and foundation solutions for infrastructure projects.",
       details: [
@@ -69,7 +69,7 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
     },
     {
-      icon: <Leaf className="h-8 w-8" />,
+      icon: <Leaf className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" />,
       title: "Environmental Services",
       description: "Comprehensive environmental impact assessments and sustainable project development.",
       details: [
@@ -114,10 +114,10 @@ const Services = () => {
               <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                   <div className="flex items-center mb-6">
-                    <div className="bg-red-600 text-white p-4 rounded-full mr-4">
+                    <div className="bg-red-600 text-white p-3 sm:p-4 rounded-full mr-4">
                       {service.icon}
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900">{service.title}</h3>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">{service.title}</h3>
                   </div>
                   <p className="text-base md:text-lg text-slate-600 mb-6">{service.description}</p>
                   <ul className="space-y-3">
