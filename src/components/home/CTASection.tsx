@@ -11,7 +11,7 @@ const CTASection = () => {
           Partner with GGL for your next engineering project and experience the difference that expertise makes.
         </p>
         <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-10 py-6 shadow-2xl hover:shadow-red-600/25 transition-all duration-300 transform hover:scale-105">
-          <a href="https://wa.me/2348034003089" className="flex items-center space-x-3">
+          <a href="https://wa.link/se6ial" className="flex items-center space-x-3">
             <span>Start Your Project</span>
             <ArrowRight className="h-5 w-5" />
           </a>

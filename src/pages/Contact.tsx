@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -25,7 +24,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const whatsappMessage = `Hello! I'm interested in your services.\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCompany: ${formData.company}\nService: ${formData.service}\nMessage: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/2348034003089?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.link/se6ial?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -254,7 +253,7 @@ const Contact = () => {
                     size="lg" 
                     variant="outline" 
                     className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white text-base px-8 py-4"
-                    onClick={() => window.open('https://wa.me/2348034003089', '_blank')}
+                    onClick={() => window.open('https://wa.link/se6ial', '_blank')}
                   >
                     <MessageSquare className="h-5 w-5 mr-2" />
                     Quick Chat
@@ -281,7 +280,7 @@ const Contact = () => {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="border-white bg-white/10 text-white hover:bg-white hover:text-slate-900 text-base px-8 py-4 backdrop-blur-sm">
-              <a href="https://wa.me/2348034003089" className="flex items-center space-x-2">
+              <a href="https://wa.link/se6ial" className="flex items-center space-x-2">
                 <MessageSquare className="h-5 w-5" />
                 <span>WhatsApp Now</span>
               </a>

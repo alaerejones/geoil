@@ -37,7 +37,7 @@ const HeroSection = () => {
             </Link>
           </Button>
           <Button size="lg" variant="outline" className="border-white bg-white/10 text-white hover:bg-white hover:text-slate-900 text-base px-8 py-4 backdrop-blur-sm transition-all duration-300">
-            <a href="https://wa.me/2348034003089" className="flex items-center space-x-2">
+            <a href="https://wa.link/se6ial" className="flex items-center space-x-2">
               <span>Get Quote</span>
             </a>
           </Button>

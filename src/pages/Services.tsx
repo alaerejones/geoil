@@ -155,7 +155,7 @@ const Services = () => {
             Get expert consultation tailored to your specific engineering needs.
           </p>
           <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-8 py-4">
-            <a href="https://wa.me/2348034003089">Request Consultation</a>
+            <a href="https://wa.link/se6ial">Request Consultation</a>
           </Button>
         </div>
       </section>
