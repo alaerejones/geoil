@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -13,19 +12,19 @@ const ServicesSection = () => {
       icon: <Zap className="h-6 w-6" />,
       title: "Electrical Earthing",
       description: "Comprehensive electrical earthing services ensuring safety and operational integrity of electrical installations.",
-      image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1200&q=80"
+      image: "/assets/images/electrical-earthing.jpg"
     },
     {
       icon: <Shield className="h-6 w-6" />,
       title: "Cathodic Protection",
       description: "Advanced cathodic protection systems to safeguard pipelines and structures from corrosion.",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1200&q=80"
+      image: "/assets/images/cathodic-protection.jpg"
     },
     {
       icon: <Drill className="h-6 w-6" />,
       title: "Geotechnical Investigation",
       description: "Deep insights into subsurface conditions through 2D resistivity, seismic analysis, and soil studies.",
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80"
+      image: "/assets/images/geotechnical-investigation.jpg"
     }
   ];
 

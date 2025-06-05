@@ -4,10 +4,17 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import OptimizedImage from "@/components/OptimizedImage";
 import { Link } from "react-router-dom";
+
 const HeroSection = () => {
-  return <section className="relative min-h-screen flex items-center justify-center pt-20">
+  return (
+    <section className="relative min-h-screen flex items-center justify-center pt-20">
       <div className="absolute inset-0">
-        <OptimizedImage src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80" alt="Industrial Engineering Infrastructure" className="w-full h-full" loading="eager" />
+        <OptimizedImage 
+          src="/lovable-uploads/59f0b476-c26b-420a-a0d6-4ccc0d0b2d2e.png" 
+          alt="Geogreatotechnics Team at Work - Drilling Operations" 
+          className="w-full h-full" 
+          loading="eager" 
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/70 to-slate-900/80"></div>
       </div>
 
@@ -36,6 +43,8 @@ const HeroSection = () => {
           </Button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;

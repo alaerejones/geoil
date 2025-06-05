@@ -14,6 +14,11 @@ const OptimizedImage = ({ src, alt, className = '', loading = 'lazy' }: Optimize
 
   // Create optimized src with quality reduction for faster loading
   const getOptimizedSrc = (originalSrc: string) => {
+    // For local assets, return as-is
+    if (originalSrc.startsWith('/assets/') || originalSrc.startsWith('/lovable-uploads/') || originalSrc.startsWith('/geo-uploads/')) {
+      return originalSrc;
+    }
+    
     if (originalSrc.includes('unsplash.com')) {
       // For Unsplash images, add optimization parameters
       const url = new URL(originalSrc);
