@@ -9,7 +9,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 const Services = () => {
   const services = [
     {
-      icon: <Zap className="h-12 w-12" />,
+      icon: <Zap className="h-8 w-8" />,
       title: "Electrical Earthing",
       description: "Comprehensive electrical earthing services to ensure the safety and operational integrity of electrical installations.",
       details: [
@@ -21,7 +21,7 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=800&q=80"
     },
     {
-      icon: <Shield className="h-12 w-12" />,
+      icon: <Shield className="h-8 w-8" />,
       title: "Pipeline Cathodic Protection",
       description: "Advanced cathodic protection systems that safeguard pipelines and structures from corrosion.",
       details: [
@@ -33,7 +33,7 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80"
     },
     {
-      icon: <Drill className="h-12 w-12" />,
+      icon: <Drill className="h-8 w-8" />,
       title: "Geophysical & Geotechnical Investigation",
       description: "Deep insights into subsurface conditions through advanced geophysical and geotechnical analysis.",
       details: [
@@ -45,7 +45,7 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80"
     },
     {
-      icon: <Waves className="h-12 w-12" />,
+      icon: <Waves className="h-8 w-8" />,
       title: "Water Drilling & Solar Systems",
       description: "Sustainable water supply solutions with solar-powered borehole systems.",
       details: [
@@ -57,7 +57,7 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80"
     },
     {
-      icon: <Hammer className="h-12 w-12" />,
+      icon: <Hammer className="h-8 w-8" />,
       title: "Civil Construction & Piling",
       description: "Comprehensive civil engineering and foundation solutions for infrastructure projects.",
       details: [
@@ -69,7 +69,7 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
     },
     {
-      icon: <Leaf className="h-12 w-12" />,
+      icon: <Leaf className="h-8 w-8" />,
       title: "Environmental Services",
       description: "Comprehensive environmental impact assessments and sustainable project development.",
       details: [
@@ -99,8 +99,8 @@ const Services = () => {
         </div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
-          <p className="text-xl md:text-2xl text-slate-200">
+          <h1 className="text-3xl md:text-6xl font-bold mb-6">Our Services</h1>
+          <p className="text-lg md:text-2xl text-slate-200">
             Comprehensive engineering solutions for oil & gas, construction, and environmental sectors.
           </p>
         </div>
@@ -117,16 +117,16 @@ const Services = () => {
                     <div className="bg-red-600 text-white p-4 rounded-full mr-4">
                       {service.icon}
                     </div>
-                    <h3 className="text-3xl font-bold text-slate-900">{service.title}</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900">{service.title}</h3>
                   </div>
-                  <p className="text-lg text-slate-600 mb-6">{service.description}</p>
+                  <p className="text-base md:text-lg text-slate-600 mb-6">{service.description}</p>
                   <ul className="space-y-3">
                     {service.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className="flex items-start space-x-3">
                         <div className="bg-red-600 rounded-full p-1 mt-1">
                           <div className="w-2 h-2 bg-white rounded-full"></div>
                         </div>
-                        <span className="text-slate-600">{detail}</span>
+                        <span className="text-sm md:text-base text-slate-600">{detail}</span>
                       </li>
                     ))}
                   </ul>
@@ -147,8 +147,8 @@ const Services = () => {
       {/* CTA Section */}
       <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Operations?</h2>
-          <p className="text-xl text-slate-300 mb-8">
+          <h2 className="text-2xl md:text-4xl font-bold mb-6">Ready to Transform Your Operations?</h2>
+          <p className="text-lg md:text-xl text-slate-300 mb-8">
             Get expert consultation tailored to your specific engineering needs.
           </p>
           <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-6">
