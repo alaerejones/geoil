@@ -11,7 +11,7 @@ interface SEOHeadProps {
 
 const SEOHead = ({ title, description, keywords, image, url }: SEOHeadProps) => {
   const fullTitle = `${title} | Geogreatotechnics & Geodreels Ltd`;
-  const defaultImage = "/lovable-uploads/05e99988-5d95-4837-ada7-c15edb9f9ec1.png";
+  const defaultImage = "/geo-uploads/05e99988-5d95-4837-ada7-c15edb9f9ec1.png";
   const siteUrl = "https://geogreatotechnics.com";
 
   return (

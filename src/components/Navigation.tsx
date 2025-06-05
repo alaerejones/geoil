@@ -19,7 +19,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <img src="/lovable-uploads/05e99988-5d95-4837-ada7-c15edb9f9ec1.png" alt="Geogreatotechnics Logo" className="h-20 w-20" />
+            <img src="/geo-uploads/05e99988-5d95-4837-ada7-c15edb9f9ec1.png" alt="Geogreatotechnics Logo" className="h-20 w-20" />
           </div>
           
           {/* Desktop Navigation */}

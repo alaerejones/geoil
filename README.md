@@ -1,22 +1,22 @@
-# Welcome to your Lovable project
+# Welcome to your geo project
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/af33c3d9-d045-47a7-b5eb-01a6c2ba2fee
+**URL**: https://geo.dev/projects/af33c3d9-d045-47a7-b5eb-01a6c2ba2fee
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
+**Use geo**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/af33c3d9-d045-47a7-b5eb-01a6c2ba2fee) and start prompting.
+Simply visit the [geo Project](https://geo.dev/projects/af33c3d9-d045-47a7-b5eb-01a6c2ba2fee) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+Changes made via geo will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in geo.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +62,12 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/af33c3d9-d045-47a7-b5eb-01a6c2ba2fee) and click on Share -> Publish.
+Simply open [geo](https://geo.dev/projects/af33c3d9-d045-47a7-b5eb-01a6c2ba2fee) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain to my geo project?
 
 Yes, you can!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Read more here: [Setting up a custom domain](https://docs.geo.dev/tips-tricks/custom-domain#step-by-step-guide)
