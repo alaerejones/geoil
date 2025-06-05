@@ -1,4 +1,5 @@
 
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -67,6 +68,31 @@ const ServicesSection = () => {
     setSelectedService(null);
   };
 
+  const getImageStyles = (serviceTitle: string) => {
+    switch (serviceTitle) {
+      case "Hydrogeological Investigation":
+        return {
+          aspectRatio: "aspect-[4/3]",
+          objectPosition: "object-cover object-top"
+        };
+      case "Industrial Water Drilling":
+        return {
+          aspectRatio: "aspect-[4/3]",
+          objectPosition: "object-cover object-center"
+        };
+      case "Integrated Geoscience":
+        return {
+          aspectRatio: "aspect-[4/3]",
+          objectPosition: "object-cover object-center"
+        };
+      default:
+        return {
+          aspectRatio: "aspect-video",
+          objectPosition: "object-cover"
+        };
+    }
+  };
+
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,34 +105,37 @@ const ServicesSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-10 mb-16">
-          {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg overflow-hidden">
-              <div className={`relative ${service.title === "Hydrogeological Investigation" ? "aspect-[4/3]" : "aspect-video"}`}>
-                <OptimizedImage 
-                  src={service.image} 
-                  alt={service.title} 
-                  className={`w-full h-full ${service.title === "Hydrogeological Investigation" ? "object-cover object-top" : "object-cover"}`}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 text-white">
-                  <div className="bg-red-600 p-3 rounded-full">
-                    {service.icon}
+          {services.map((service, index) => {
+            const imageStyles = getImageStyles(service.title);
+            return (
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg overflow-hidden">
+                <div className={`relative ${imageStyles.aspectRatio}`}>
+                  <OptimizedImage 
+                    src={service.image} 
+                    alt={service.title} 
+                    className={`w-full h-full ${imageStyles.objectPosition}`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <div className="bg-red-600 p-3 rounded-full">
+                      {service.icon}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <CardContent className="p-8">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">{service.title}</h3>
-                <p className="text-base text-slate-600 mb-6 leading-relaxed">{service.description}</p>
-                <Button 
-                  variant="outline" 
-                  className="group-hover:bg-red-600 group-hover:text-white transition-all duration-300 text-sm"
-                  onClick={() => handleLearnMore(service)}
-                >
-                  Learn More
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+                <CardContent className="p-8">
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">{service.title}</h3>
+                  <p className="text-base text-slate-600 mb-6 leading-relaxed">{service.description}</p>
+                  <Button 
+                    variant="outline" 
+                    className="group-hover:bg-red-600 group-hover:text-white transition-all duration-300 text-sm"
+                    onClick={() => handleLearnMore(service)}
+                  >
+                    Learn More
+                  </Button>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
         <div className="text-center">
@@ -129,3 +158,4 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+
