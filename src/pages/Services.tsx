@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -20,7 +19,7 @@ const Services = () => {
         "Water quality assessment and testing",
         "Drilling equipment and maintenance"
       ],
-      image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/a621e485-0a37-44df-9d73-9e24b082bff4.png"
     },
     {
       icon: <Earth className="h-6 w-6" />,

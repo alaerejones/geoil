@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -13,7 +12,7 @@ const ServicesSection = () => {
       icon: <Droplets className="h-6 w-6" />,
       title: "Industrial Water Drilling",
       description: "Professional water drilling services for industrial applications with advanced drilling techniques and equipment.",
-      image: "/assets/images/geotechnical-investigation.jpg"
+      image: "/lovable-uploads/a621e485-0a37-44df-9d73-9e24b082bff4.png"
     },
     {
       icon: <Earth className="h-6 w-6" />,
