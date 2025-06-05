@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Target, Award, CheckCircle, ArrowRight, Shield, Zap, Clock } from "lucide-react";
+import { Users, Target, Award, CheckCircle, ArrowRight, Shield, Zap, Clock, Linkedin } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -38,6 +38,33 @@ const About = () => {
     { number: "200+", label: "Projects Completed", icon: <CheckCircle className="h-5 w-5" /> },
     { number: "50+", label: "Major Clients", icon: <Users className="h-5 w-5" /> },
     { number: "100%", label: "Safety Record", icon: <Shield className="h-5 w-5" /> }
+  ];
+
+  const teamMembers = [
+    {
+      name: "Engr. Segun Falodun, mnmgs, c.engr, comeg, MSc.",
+      role: "Managing Director",
+      emoji: "👨‍💼",
+      bio: "Segun Falodun is the Managing Director of Geogreatotechnics & Geodreels Ltd. An astute engineer and geoscientist with over 23 years of experience, he has led numerous large-scale projects across Nigeria and West Africa. He began his career at Wiss Engineering Ltd., executing over 20 cathodic protection and steel structure projects. With strong expertise in petroleum geoscience, geotechnical and corrosion engineering, and pipeline construction, Engr. Falodun has successfully completed over 2,500 Vertical Electrical Soundings and a wide range of seismic and NDT works. He holds multiple degrees including a Master's in Petroleum Geoscience (FUPRE), a Master's and PGD in Applied Geophysics (Rivers State University), and is currently pursuing a third M.Sc. in Oil and Gas Energy Management at the University of East London. He is a member of several professional bodies including the NMGS, SEG, and COREN."
+    },
+    {
+      name: "Dave Adoye",
+      role: "Geophysics & Water Resources Manager",
+      emoji: "👷‍♂",
+      bio: "Dave Adoye leads the Geophysics and Water Resources unit. With over 17 years of field experience and a B.Sc. in Geophysics from Edo State University, he has successfully executed more than 15 solar water projects across Nigeria. He is currently pursuing a Master's degree in Engineering Geology and Hydrology at the University of Port Harcourt. Mr. Adoye is widely respected for pioneering solar borehole solutions in the Niger Delta and is a corporate member of the Nigerian Mining and Geosciences Society (NMGS)."
+    },
+    {
+      name: "Ochieze Kessington Obinna",
+      role: "Head of Projects & Structural Engineering",
+      emoji: "🏗",
+      bio: "Kessington Ochieze is a seasoned civil/structural engineer and project management expert with over 25 years of professional experience. He has overseen the design and construction of major projects including residential estates, shopping malls, government facilities, and marine terminal structures across the Niger Delta. He holds a B.Eng. in Civil/Structural Engineering from the University of Port Harcourt and is currently pursuing an M.Eng. in Project Management & Construction at UNN. A corporate member of NSE, COREN, and MASE, Ochieze brings hands-on leadership in structural designs, foundation works, and engineering risk analysis."
+    },
+    {
+      name: "Jones-Ere Alaere",
+      role: "Business Development Manager / Independent Technology Consultant",
+      emoji: "💡",
+      bio: "Jones-Ere Alaere is an innovative technology strategist, author, and entrepreneur who bridges business and digital transformation. With a background in software engineering and experience working across startups and enterprise consulting, she helps organizations in energy, engineering, and digital sectors identify technology gaps and implement scalable systems. As founder of Create Technologies and author of the Code & Contour book series, she brings deep expertise in digital strategy, user-focused innovation, and enterprise modernization. She consults independently for engineering and energy firms seeking future-forward business solutions, with a focus on customer-centric, efficient, and high-impact technology adoption."
+    }
   ];
 
   return (
@@ -134,8 +161,46 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Team Members Section */}
       <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <Badge className="bg-slate-100 text-slate-700 mb-4 text-sm font-medium px-4 py-2">Our Team</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Meet Our Leadership Team</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Our experienced team of engineers and professionals brings decades of expertise to every project
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-10">
+            {teamMembers.map((member, index) => (
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+                <CardContent className="p-8">
+                  <div className="flex items-start space-x-4 mb-6">
+                    <div className="text-4xl">{member.emoji}</div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">{member.name}</h3>
+                      <div className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium inline-block mb-4">
+                        {member.role}
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-base text-slate-600 leading-relaxed mb-6">{member.bio}</p>
+                  <div className="flex items-center space-x-3">
+                    <Button variant="outline" size="sm" className="text-slate-600 hover:text-red-600 hover:border-red-600">
+                      <Linkedin className="h-4 w-4 mr-2" />
+                      Connect
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <Badge className="bg-slate-100 text-slate-700 mb-4 text-sm font-medium px-4 py-2">Our Values</Badge>
@@ -162,7 +227,7 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
