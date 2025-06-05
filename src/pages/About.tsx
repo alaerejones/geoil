@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -62,7 +61,7 @@ const About = () => {
     {
       name: "Jones-Ere Alaere",
       role: "Business Development Manager / Independent Technology Consultant",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b5e5?auto=format&fit=crop&w=300&h=300&q=80",
+      image: "/lovable-uploads/2a017ab6-1e0b-40ee-9df5-c49397d70b9f.png",
       bio: "Jones-Ere Alaere is an innovative technology strategist, author, and entrepreneur who bridges business and digital transformation. With a background in software engineering and experience working across startups and enterprise consulting, she helps organizations in energy, engineering, and digital sectors identify technology gaps and implement scalable systems. As founder of Create Technologies and author of the Code & Contour book series, she brings deep expertise in digital strategy, user-focused innovation, and enterprise modernization. She consults independently for engineering and energy firms seeking future-forward business solutions, with a focus on customer-centric, efficient, and high-impact technology adoption."
     }
   ];
