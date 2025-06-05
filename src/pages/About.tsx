@@ -44,25 +44,25 @@ const About = () => {
     {
       name: "Engr. Segun Falodun, mnmgs, c.engr, comeg, MSc.",
       role: "Managing Director",
-      emoji: "👨‍💼",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&h=300&q=80",
       bio: "Segun Falodun is the Managing Director of Geogreatotechnics & Geodreels Ltd. An astute engineer and geoscientist with over 23 years of experience, he has led numerous large-scale projects across Nigeria and West Africa. He began his career at Wiss Engineering Ltd., executing over 20 cathodic protection and steel structure projects. With strong expertise in petroleum geoscience, geotechnical and corrosion engineering, and pipeline construction, Engr. Falodun has successfully completed over 2,500 Vertical Electrical Soundings and a wide range of seismic and NDT works. He holds multiple degrees including a Master's in Petroleum Geoscience (FUPRE), a Master's and PGD in Applied Geophysics (Rivers State University), and is currently pursuing a third M.Sc. in Oil and Gas Energy Management at the University of East London. He is a member of several professional bodies including the NMGS, SEG, and COREN."
     },
     {
       name: "Dave Adoye",
       role: "Geophysics & Water Resources Manager",
-      emoji: "👷‍♂",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&h=300&q=80",
       bio: "Dave Adoye leads the Geophysics and Water Resources unit. With over 17 years of field experience and a B.Sc. in Geophysics from Edo State University, he has successfully executed more than 15 solar water projects across Nigeria. He is currently pursuing a Master's degree in Engineering Geology and Hydrology at the University of Port Harcourt. Mr. Adoye is widely respected for pioneering solar borehole solutions in the Niger Delta and is a corporate member of the Nigerian Mining and Geosciences Society (NMGS)."
     },
     {
       name: "Ochieze Kessington Obinna",
       role: "Head of Projects & Structural Engineering",
-      emoji: "🏗",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&h=300&q=80",
       bio: "Kessington Ochieze is a seasoned civil/structural engineer and project management expert with over 25 years of professional experience. He has overseen the design and construction of major projects including residential estates, shopping malls, government facilities, and marine terminal structures across the Niger Delta. He holds a B.Eng. in Civil/Structural Engineering from the University of Port Harcourt and is currently pursuing an M.Eng. in Project Management & Construction at UNN. A corporate member of NSE, COREN, and MASE, Ochieze brings hands-on leadership in structural designs, foundation works, and engineering risk analysis."
     },
     {
       name: "Jones-Ere Alaere",
       role: "Business Development Manager / Independent Technology Consultant",
-      emoji: "💡",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b5e5?auto=format&fit=crop&w=300&h=300&q=80",
       bio: "Jones-Ere Alaere is an innovative technology strategist, author, and entrepreneur who bridges business and digital transformation. With a background in software engineering and experience working across startups and enterprise consulting, she helps organizations in energy, engineering, and digital sectors identify technology gaps and implement scalable systems. As founder of Create Technologies and author of the Code & Contour book series, she brings deep expertise in digital strategy, user-focused innovation, and enterprise modernization. She consults independently for engineering and energy firms seeking future-forward business solutions, with a focus on customer-centric, efficient, and high-impact technology adoption."
     }
   ];
@@ -176,11 +176,17 @@ const About = () => {
             {teamMembers.map((member, index) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
                 <CardContent className="p-8">
-                  <div className="flex items-start space-x-4 mb-6">
-                    <div className="text-4xl">{member.emoji}</div>
+                  <div className="flex items-start space-x-6 mb-6">
+                    <div className="flex-shrink-0">
+                      <OptimizedImage 
+                        src={member.image}
+                        alt={member.name}
+                        className="w-20 h-20 rounded-full border-4 border-red-100"
+                      />
+                    </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-slate-900 mb-2">{member.name}</h3>
-                      <div className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium inline-block mb-4">
+                      <div className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium inline-block">
                         {member.role}
                       </div>
                     </div>
