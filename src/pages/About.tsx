@@ -221,7 +221,7 @@ const About = () => {
             <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
               <a href="https://wa.me/2348034003089">Get Started</a>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
+            <Button size="lg" variant="outline" className="border-white bg-white text-black hover:bg-gray-100 hover:text-black">
               <Link to="/projects">View Our Projects</Link>
             </Button>
           </div>
