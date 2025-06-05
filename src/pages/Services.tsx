@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Zap, Shield, Drill, Waves, Hammer, Leaf } from "lucide-react";
+import { Zap, Shield, Drill, Waves, Hammer, Leaf, Droplets, Globe, Search, Database } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -10,6 +10,54 @@ import OptimizedImage from "@/components/OptimizedImage";
 
 const Services = () => {
   const services = [
+    {
+      icon: <Droplets className="h-6 w-6" />,
+      title: "Industrial Water Drilling",
+      description: "Professional water drilling services for industrial applications with advanced drilling techniques and equipment.",
+      details: [
+        "Deep borehole drilling and development",
+        "Industrial water supply solutions",
+        "Water quality assessment and testing",
+        "Drilling equipment and maintenance"
+      ],
+      image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      icon: <Globe className="h-6 w-6" />,
+      title: "Integrated Geoscience",
+      description: "Comprehensive geoscience solutions combining geological, geophysical, and geochemical analysis for complete subsurface understanding.",
+      details: [
+        "Geological mapping and analysis",
+        "Geophysical surveys and interpretation",
+        "Geochemical analysis and testing",
+        "Integrated subsurface modeling"
+      ],
+      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      icon: <Search className="h-6 w-6" />,
+      title: "Hydrogeological Investigation",
+      description: "Detailed hydrogeological studies to understand groundwater systems, flow patterns, and aquifer characteristics.",
+      details: [
+        "Groundwater exploration and mapping",
+        "Aquifer testing and analysis",
+        "Hydrogeological modeling",
+        "Water resource assessment"
+      ],
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      icon: <Database className="h-6 w-6" />,
+      title: "Reservoir Study and Management",
+      description: "Comprehensive reservoir analysis and management solutions for optimal resource extraction and sustainability.",
+      details: [
+        "Reservoir characterization studies",
+        "Production optimization strategies",
+        "Enhanced recovery techniques",
+        "Reservoir monitoring and management"
+      ],
+      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+    },
     {
       icon: <Zap className="h-6 w-6" />,
       title: "Electrical Earthing",

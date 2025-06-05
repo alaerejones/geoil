@@ -1,13 +1,38 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Zap, Drill, ArrowRight } from "lucide-react";
+import { Shield, Zap, Drill, ArrowRight, Droplets, Globe, Search, Database } from "lucide-react";
 import OptimizedImage from "@/components/OptimizedImage";
 import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
   const services = [
+    {
+      icon: <Droplets className="h-6 w-6" />,
+      title: "Industrial Water Drilling",
+      description: "Professional water drilling services for industrial applications with advanced drilling techniques and equipment.",
+      image: "/assets/images/geotechnical-investigation.jpg"
+    },
+    {
+      icon: <Globe className="h-6 w-6" />,
+      title: "Integrated Geoscience",
+      description: "Comprehensive geoscience solutions combining geological, geophysical, and geochemical analysis for complete subsurface understanding.",
+      image: "/assets/images/electrical-earthing.jpg"
+    },
+    {
+      icon: <Search className="h-6 w-6" />,
+      title: "Hydrogeological Investigation",
+      description: "Detailed hydrogeological studies to understand groundwater systems, flow patterns, and aquifer characteristics.",
+      image: "/assets/images/cathodic-protection.jpg"
+    },
+    {
+      icon: <Database className="h-6 w-6" />,
+      title: "Reservoir Study and Management",
+      description: "Comprehensive reservoir analysis and management solutions for optimal resource extraction and sustainability.",
+      image: "/assets/images/geotechnical-investigation.jpg"
+    },
     {
       icon: <Zap className="h-6 w-6" />,
       title: "Electrical Earthing",
