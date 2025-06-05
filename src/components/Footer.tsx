@@ -14,7 +14,7 @@ const Footer = () => {
                 className="h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36 object-contain" 
               />
             </div>
-            <p className="text-slate-400 text-sm -mt-18">
+            <p className="text-slate-400 text-sm -mt-6">
               Leading geotechnical engineering and environmental consulting services across West Africa.
             </p>
           </div>
