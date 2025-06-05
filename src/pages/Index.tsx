@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -68,13 +67,7 @@ const Index = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-6">
-              <a href="https://wa.me/2348034003089" className="flex items-center space-x-2">
-                <span>Get Expert Consultation</span>
-                <ArrowRight className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-slate-900 text-lg px-8 py-6">
+            <Button size="lg" className="bg-black hover:bg-red-700 text-white text-lg px-8 py-6">
               <Link to="/about" className="flex items-center space-x-2">
                 <span>Learn More About Us</span>
               </Link>

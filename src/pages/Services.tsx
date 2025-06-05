@@ -88,7 +88,7 @@ const Services = () => {
       <ScrollToTop />
 
       {/* Hero Section */}
-      <section className="relative py-20 pt-32">
+      <section className="relative min-h-screen flex items-center justify-center pt-20">
         <div className="absolute inset-0">
           <img 
             src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1920&q=80" 

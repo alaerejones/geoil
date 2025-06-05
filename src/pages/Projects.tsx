@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -92,15 +91,13 @@ const Projects = () => {
     }
   ];
 
-  const categories = ["All", "Electrical Engineering", "Cathodic Protection", "Water Resources", "Geotechnical", "Environmental", "Marine Construction"];
-
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       <ScrollToTop />
 
       {/* Hero Section */}
-      <section className="relative py-20 pt-32">
+      <section className="relative min-h-screen flex items-center justify-center pt-20">
         <div className="absolute inset-0">
           <img 
             src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80" 

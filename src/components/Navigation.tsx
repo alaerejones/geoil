@@ -11,9 +11,8 @@ const Navigation = () => {
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-slate-200 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center space-x-2">
-            <img src="/lovable-uploads/05e99988-5d95-4837-ada7-c15edb9f9ec1.png" alt="Geogreatotechnics Logo" className="h-12 w-12" />
-            <span className="font-bold text-xl text-slate-900 hidden sm:block">GGL</span>
+          <div className="flex items-center">
+            <img src="/lovable-uploads/05e99988-5d95-4837-ada7-c15edb9f9ec1.png" alt="Geogreatotechnics Logo" className="h-16 w-16" />
           </div>
           
           {/* Desktop Navigation */}

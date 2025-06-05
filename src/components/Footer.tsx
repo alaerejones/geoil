@@ -8,9 +8,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <img src="/lovable-uploads/05e99988-5d95-4837-ada7-c15edb9f9ec1.png" alt="Logo" className="h-8 w-8" />
-              <span className="font-bold text-xl">GGL</span>
+            <div className="flex items-center mb-4">
+              <img src="/lovable-uploads/05e99988-5d95-4837-ada7-c15edb9f9ec1.png" alt="Logo" className="h-12 w-12" />
             </div>
             <p className="text-slate-400 text-sm">
               Leading geotechnical engineering and environmental consulting services across West Africa.
