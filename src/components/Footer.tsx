@@ -78,8 +78,7 @@ const Footer = () => {
         <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400 text-sm">
           <p>© Copyright <strong>Geogreatotechnics & Geodreels Ltd</strong></p>
           <p>All Rights Reserved</p>
-          <br />
-          <p>
+          <p className="mt-2">
             Designed by{" "}
             <a 
               href="https://www.instagram.com/missjones_tech?igsh=eGhkNzdqZTR1emp6" 
@@ -90,7 +89,6 @@ const Footer = () => {
               MissJonesTech
             </a>
           </p>
-          <br />
           <p>
             Distributed by{" "}
             <a 
