@@ -18,7 +18,7 @@ const ServicesSection = () => {
       icon: <Earth className="h-6 w-6" />,
       title: "Integrated Geoscience",
       description: "Comprehensive geoscience solutions combining geological, geophysical, and geochemical analysis for complete subsurface understanding.",
-      image: "/assets/images/electrical-earthing.jpg"
+      image: "/lovable-uploads/48389c9f-b7c2-49b3-b0ef-6b6043e66c7d.png"
     },
     {
       icon: <FlaskConical className="h-6 w-6" />,

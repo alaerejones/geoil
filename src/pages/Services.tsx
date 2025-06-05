@@ -31,7 +31,7 @@ const Services = () => {
         "Geochemical analysis and testing",
         "Integrated subsurface modeling"
       ],
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/48389c9f-b7c2-49b3-b0ef-6b6043e66c7d.png"
     },
     {
       icon: <FlaskConical className="h-6 w-6" />,
