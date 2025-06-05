@@ -43,7 +43,7 @@ const About = () => {
     {
       name: "Engr. Segun Falodun, mnmgs, c.engr, comeg, MSc.",
       role: "Managing Director",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&h=300&q=80",
+      image: "/lovable-uploads/04cfb953-5171-4dcd-ae5d-0ccdb3f010fe.png",
       bio: "Segun Falodun is the Managing Director of Geogreatotechnics & Geodreels Ltd. An astute engineer and geoscientist with over 23 years of experience, he has led numerous large-scale projects across Nigeria and West Africa. He began his career at Wiss Engineering Ltd., executing over 20 cathodic protection and steel structure projects. With strong expertise in petroleum geoscience, geotechnical and corrosion engineering, and pipeline construction, Engr. Falodun has successfully completed over 2,500 Vertical Electrical Soundings and a wide range of seismic and NDT works. He holds multiple degrees including a Master's in Petroleum Geoscience (FUPRE), a Master's and PGD in Applied Geophysics (Rivers State University), and is currently pursuing a third M.Sc. in Oil and Gas Energy Management at the University of East London. He is a member of several professional bodies including the NMGS, SEG, and COREN."
     },
     {
