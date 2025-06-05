@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -12,19 +11,19 @@ import { Link } from "react-router-dom";
 const Index = () => {
   const services = [
     {
-      icon: <Zap className="h-6 w-6" />,
+      icon: <Zap className="h-5 w-5" />,
       title: "Electrical Earthing",
       description: "Comprehensive electrical earthing services ensuring safety and operational integrity of electrical installations.",
       image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1200&q=80"
     },
     {
-      icon: <Shield className="h-6 w-6" />,
+      icon: <Shield className="h-5 w-5" />,
       title: "Cathodic Protection",
       description: "Advanced cathodic protection systems to safeguard pipelines and structures from corrosion.",
       image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1200&q=80"
     },
     {
-      icon: <Drill className="h-6 w-6" />,
+      icon: <Drill className="h-5 w-5" />,
       title: "Geotechnical Investigation",
       description: "Deep insights into subsurface conditions through 2D resistivity, seismic analysis, and soil studies.",
       image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80"
@@ -32,10 +31,10 @@ const Index = () => {
   ];
 
   const stats = [
-    { number: "15+", label: "Years Experience", icon: <Clock className="h-5 w-5" /> },
-    { number: "200+", label: "Projects Completed", icon: <CheckCircle className="h-5 w-5" /> },
-    { number: "50+", label: "Major Clients", icon: <Users className="h-5 w-5" /> },
-    { number: "100%", label: "Safety Record", icon: <Shield className="h-5 w-5" /> }
+    { number: "15+", label: "Years Experience", icon: <Clock className="h-4 w-4" /> },
+    { number: "200+", label: "Projects Completed", icon: <CheckCircle className="h-4 w-4" /> },
+    { number: "50+", label: "Major Clients", icon: <Users className="h-4 w-4" /> },
+    { number: "100%", label: "Safety Record", icon: <Shield className="h-4 w-4" /> }
   ];
 
   return (
@@ -63,12 +62,12 @@ const Index = () => {
             The Link to Technical Excellence
           </h1>
           
-          <p className="text-lg md:text-2xl text-slate-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-3xl mx-auto">
             Providing reliable, professional, and innovative solutions across Nigeria's oil, energy, and infrastructure sectors.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-6">
+            <Button size="lg" className="bg-black hover:bg-red-600 text-white text-lg px-8 py-6">
               <Link to="/about" className="flex items-center space-x-2">
                 <span>Learn More About Us</span>
               </Link>
