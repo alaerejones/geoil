@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <img src="/lovable-uploads/05e99988-5d95-4837-ada7-c15edb9f9ec1.png" alt="Logo" className="h-16 w-16" />
+              <img src="/lovable-uploads/05e99988-5d95-4837-ada7-c15edb9f9ec1.png" alt="Logo" className="h-20 w-20" />
             </div>
             <p className="text-slate-400 text-sm">
               Leading geotechnical engineering and environmental consulting services across West Africa.
@@ -76,7 +76,32 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400 text-sm">
-          <p>&copy; 2024 Geogreatotechnics & Geodreels Ltd. All rights reserved.</p>
+          <p>© Copyright <strong>Geogreatotechnics & Geodreels Ltd</strong></p>
+          <p>All Rights Reserved</p>
+          <br />
+          <p>
+            Designed by{" "}
+            <a 
+              href="https://www.instagram.com/missjones_tech?igsh=eGhkNzdqZTR1emp6" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:underline hover:text-white transition-colors"
+            >
+              MissJonesTech
+            </a>
+          </p>
+          <br />
+          <p>
+            Distributed by{" "}
+            <a 
+              href="https://www.instagram.com/creittechnologies?igsh=ZXB1YjIxM2xsMmQ4" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:underline hover:text-white transition-colors"
+            >
+              Creit Digitals
+            </a>
+          </p>
         </div>
       </div>
     </footer>
