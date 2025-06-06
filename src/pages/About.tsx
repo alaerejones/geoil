@@ -50,7 +50,7 @@ const About = () => {
     {
       name: "Dave Adoye",
       role: "Geophysics & Water Resources Manager",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&h=300&q=80",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&h=300&q=80",
       bio: "Dave Adoye leads the Geophysics and Water Resources unit. With over 17 years of field experience and a B.Sc. in Geophysics from Edo State University, he has successfully executed more than 15 solar water projects across Nigeria. He is currently pursuing a Master's degree in Engineering Geology and Hydrology at the University of Port Harcourt. Mr. Adoye is widely respected for pioneering solar borehole solutions in the Niger Delta and is a corporate member of the Nigerian Mining and Geosciences Society (NMGS)."
     },
     {
