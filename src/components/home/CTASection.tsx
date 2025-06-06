@@ -17,8 +17,8 @@ const CTASection = () => {
               <ArrowRight className="h-5 w-5" />
             </a>
           </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 text-base px-10 py-6 shadow-2xl transition-all duration-300 transform hover:scale-105">
-            <a href="#" className="flex items-center space-x-3 text-inherit">
+          <Button size="lg" variant="outline" className="border-white bg-white/10 text-white hover:bg-white hover:text-slate-900 text-base px-8 py-4 backdrop-blur-sm">
+            <a href="#" className="flex items-center space-x-2">
               <FileText className="h-5 w-5" />
               <span>View Company Profile</span>
             </a>
