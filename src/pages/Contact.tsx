@@ -274,7 +274,7 @@ const Contact = () => {
             <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-8 py-4">
               <a href="tel:+2348034003089" className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Call Emergency Line</span>
+                <span>Call</span>
               </a>
             </Button>
             <Button size="lg" variant="outline" className="border-white bg-white/10 text-white hover:bg-white hover:text-slate-900 text-base px-8 py-4 backdrop-blur-sm">
