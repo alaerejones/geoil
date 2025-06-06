@@ -55,7 +55,7 @@ const Services = () => {
         "Enhanced recovery techniques",
         "Reservoir monitoring and management"
       ],
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/cc0c297e-9eff-4ed8-a392-64efebc136b3.png"
     },
     {
       icon: <Zap className="h-6 w-6" />,
