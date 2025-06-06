@@ -1,4 +1,3 @@
-
 import { Zap, Shield, Drill, Waves, Hammer, Leaf, Droplets, Earth, FlaskConical, Database } from "lucide-react";
 import ServiceCard from "./ServiceCard";
 
@@ -50,7 +49,7 @@ const ServicesGrid = () => {
         "Enhanced recovery techniques",
         "Reservoir monitoring and management"
       ],
-      image: "/lovable-uploads/cc0c297e-9eff-4ed8-a392-64efebc136b3.png"
+      image: "/lovable-uploads/f81baa2b-0ed8-45a2-8ef5-a6a0e19603af.png"
     },
     {
       icon: <Zap className="h-6 w-6" />,
