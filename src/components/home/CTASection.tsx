@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, FileText } from "lucide-react";
 
 const CTASection = () => {
   return (
@@ -10,12 +10,20 @@ const CTASection = () => {
         <p className="text-lg text-slate-300 mb-12 leading-relaxed">
           Partner with GGL for your next engineering project and experience the difference that expertise makes.
         </p>
-        <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-10 py-6 shadow-2xl hover:shadow-red-600/25 transition-all duration-300 transform hover:scale-105">
-          <a href="https://wa.link/se6ial" className="flex items-center space-x-3">
-            <span>Start Your Project</span>
-            <ArrowRight className="h-5 w-5" />
-          </a>
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-base px-10 py-6 shadow-2xl hover:shadow-red-600/25 transition-all duration-300 transform hover:scale-105">
+            <a href="https://wa.link/se6ial" className="flex items-center space-x-3">
+              <span>Start Your Project</span>
+              <ArrowRight className="h-5 w-5" />
+            </a>
+          </Button>
+          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 text-base px-10 py-6 shadow-2xl transition-all duration-300 transform hover:scale-105">
+            <a href="#" className="flex items-center space-x-3">
+              <FileText className="h-5 w-5" />
+              <span>View Company Profile</span>
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   );
