@@ -135,7 +135,7 @@ const ServicesGrid = () => {
         "Sustainable project development strategies",
         "Community engagement and development"
       ],
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/d0689c8a-b8e8-4cd1-bd5a-11933106daf9.png"
     }
   ];
 
