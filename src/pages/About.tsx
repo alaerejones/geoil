@@ -44,7 +44,8 @@ const About = () => {
       name: "Engr. Segun Falodun, mnmgs, c.engr, comeg, MSc.",
       role: "Managing Director",
       image: "/lovable-uploads/04cfb953-5171-4dcd-ae5d-0ccdb3f010fe.png",
-      bio: "Segun Falodun is the Managing Director of Geogreatotechnics & Geodreels Ltd. An astute engineer and geoscientist with over 23 years of experience, he has led numerous large-scale projects across Nigeria and West Africa. He began his career at Wiss Engineering Ltd., executing over 20 cathodic protection and steel structure projects. With strong expertise in water borehole production, petroleum geoscience, geotechnical and corrosion engineering and pipeline construction, Engr. Falodun has successfully completed over 2,500 Vertical Electrical Soundings and a wide range of seismic and NDT works. He holds multiple degrees including a Master's in Petroleum Geoscience (FUPRE), a Master's and PGD in Applied Geophysics (Rivers State University), all with distinctions and is currently pursuing a third M.Sc. in Oil and Gas Energy Management at the University of East London. He is a member of several professional bodies including the NAEGE, NMGS, SEG and COREN."
+      bio: "Segun Falodun is the Managing Director of Geogreatotechnics & Geodreels Ltd. An astute engineer and geoscientist with over 23 years of experience, he has led numerous large-scale projects across Nigeria and West Africa. He began his career at Wiss Engineering Ltd., executing over 20 cathodic protection and steel structure projects. With strong expertise in water borehole production, petroleum geoscience, geotechnical and corrosion engineering and pipeline construction, Engr. Falodun has successfully completed over 2,500 Vertical Electrical Soundings and a wide range of seismic and NDT works. He holds multiple degrees including a Master's in Petroleum Geoscience (FUPRE), a Master's and PGD in Applied Geophysics (Rivers State University), all with distinctions and is currently pursuing a third M.Sc. in Oil and Gas Energy Management at the University of East London. He is a member of several professional bodies including the NAEGE, NMGS, SEG and COREN.",
+      linkedinUrl: "https://www.linkedin.com/in/segun-falodun-37aa295"
     },
     {
       name: "Dave Adoye",
@@ -62,7 +63,8 @@ const About = () => {
       name: "Jones-Ere Alaere",
       role: "Business Development Manager / Independent Technology Consultant",
       image: "/lovable-uploads/2a017ab6-1e0b-40ee-9df5-c49397d70b9f.png",
-      bio: "Jones-Ere Alaere is an innovative technology strategist, author, and entrepreneur who bridges business and digital transformation. With a background in software engineering and experience working across startups and enterprise consulting, she helps organizations in energy, engineering, and digital sectors identify technology gaps and implement scalable systems. As founder of Creit Technologies and author of the Code & Contour book series, she brings deep expertise in digital strategy, user-focused innovation, and enterprise modernization. She consults independently for engineering and energy firms seeking future-forward business solutions, with a focus on customer-centric, efficient, and high-impact technology adoption."
+      bio: "Jones-Ere Alaere is an innovative technology strategist, author, and entrepreneur who bridges business and digital transformation. With a background in software engineering and experience working across startups and enterprise consulting, she helps organizations in energy, engineering, and digital sectors identify technology gaps and implement scalable systems. As founder of Creit Technologies and author of the Code & Contour book series, she brings deep expertise in digital strategy, user-focused innovation, and enterprise modernization. She consults independently for engineering and energy firms seeking future-forward business solutions, with a focus on customer-centric, efficient, and high-impact technology adoption.",
+      linkedinUrl: "https://www.linkedin.com/in/alaerejones"
     }
   ];
 
@@ -191,12 +193,16 @@ const About = () => {
                     </div>
                   </div>
                   <p className="text-base text-slate-600 leading-relaxed mb-6">{member.bio}</p>
-                  <div className="flex items-center space-x-3">
-                    <Button variant="outline" size="sm" className="text-slate-600 hover:text-red-600 hover:border-red-600">
-                      <Linkedin className="h-4 w-4 mr-2" />
-                      Connect
-                    </Button>
-                  </div>
+                  {member.linkedinUrl && (
+                    <div className="flex items-center space-x-3">
+                      <Button variant="outline" size="sm" className="text-slate-600 hover:text-red-600 hover:border-red-600">
+                        <a href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                          <Linkedin className="h-4 w-4 mr-2" />
+                          Connect
+                        </a>
+                      </Button>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
