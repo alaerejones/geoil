@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -25,7 +24,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const whatsappMessage = `Hello! I'm interested in your services.\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCompany: ${formData.company}\nService: ${formData.service}\nMessage: ${formData.message}`;
-    const whatsappUrl = `https://wa.link/se6ial?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/2347051189594?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -248,24 +247,14 @@ const Contact = () => {
                   />
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 pt-6">
+                <div className="pt-6">
                   <Button 
                     type="submit" 
                     size="lg" 
-                    className="bg-red-600 hover:bg-red-700 text-white text-base px-8 py-4 flex-1"
+                    className="bg-red-600 hover:bg-red-700 text-white text-base px-8 py-4 w-full"
                   >
                     <Send className="h-5 w-5 mr-2" />
-                    Send via WhatsApp
-                  </Button>
-                  <Button 
-                    type="button" 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white text-base px-8 py-4"
-                    onClick={() => window.open('https://wa.link/se6ial', '_blank')}
-                  >
-                    <MessageSquare className="h-5 w-5 mr-2" />
-                    Quick Chat
+                    Submit
                   </Button>
                 </div>
               </form>
