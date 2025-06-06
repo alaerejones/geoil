@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -125,8 +124,8 @@ const About = () => {
             </div>
             <div>
               <OptimizedImage 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
-                alt="GGL Engineering Projects" 
+                src="/lovable-uploads/a4406bf3-416a-4114-8b57-3d91a1989e62.png" 
+                alt="GGL Field Team with Drilling Equipment" 
                 className="w-full h-96 rounded-lg shadow-lg"
               />
             </div>
