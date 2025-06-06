@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -111,22 +112,22 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {contactInfo.map((info, index) => (
-              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-                <CardContent className="p-8">
-                  <div className="bg-red-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-0 shadow-lg h-full">
+                <CardContent className="p-6 lg:p-8 flex flex-col h-full">
+                  <div className="bg-red-600 text-white p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg flex-shrink-0">
                     {info.icon}
                   </div>
-                  <h3 className="text-lg font-semibold mb-4 text-slate-900">{info.title}</h3>
-                  <div className="space-y-2 mb-6">
+                  <h3 className="text-lg font-semibold mb-4 text-slate-900 flex-shrink-0">{info.title}</h3>
+                  <div className="space-y-2 mb-6 flex-grow">
                     {info.details.map((detail, idx) => (
-                      <p key={idx} className="text-base text-slate-600">{detail}</p>
+                      <p key={idx} className="text-sm lg:text-base text-slate-600 break-words leading-relaxed">{detail}</p>
                     ))}
                   </div>
                   <Button 
                     variant="outline" 
-                    className="hover:bg-red-600 hover:text-white transition-all duration-300 text-sm"
+                    className="hover:bg-red-600 hover:text-white transition-all duration-300 text-sm mt-auto"
                     onClick={() => window.open(info.link, '_blank')}
                   >
                     {info.action}
