@@ -1,8 +1,16 @@
-import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+
+import { useNavigate } from "react-router-dom";
+import { Phone, Mail, MapPin } from "lucide-react";
 import OptimizedImage from "@/components/OptimizedImage";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="bg-slate-800 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,11 +32,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-slate-400 text-sm">
-              <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
-              <li><Link to="/projects" className="hover:text-white transition-colors">Projects</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><button onClick={() => handleNavigation('/')} className="hover:text-white transition-colors">Home</button></li>
+              <li><button onClick={() => handleNavigation('/about')} className="hover:text-white transition-colors">About</button></li>
+              <li><button onClick={() => handleNavigation('/services')} className="hover:text-white transition-colors">Services</button></li>
+              <li><button onClick={() => handleNavigation('/projects')} className="hover:text-white transition-colors">Projects</button></li>
+              <li><button onClick={() => handleNavigation('/contact')} className="hover:text-white transition-colors">Contact</button></li>
             </ul>
           </div>
 

@@ -37,7 +37,7 @@ const Navigation = () => {
               <span className="text-sm">08034003089</span>
             </a>
             <Button className="bg-red-600 hover:bg-red-700 text-white hidden sm:flex">
-              <a href="https://wa.link/se6ial" className="flex items-center space-x-2">
+              <a href="https://wa.link/se6ial" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
                 <span>Get Quote</span>
               </a>
             </Button>
