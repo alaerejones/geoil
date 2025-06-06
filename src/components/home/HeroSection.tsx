@@ -4,18 +4,25 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import OptimizedImage from "@/components/OptimizedImage";
 import { Link } from "react-router-dom";
+
 const HeroSection = () => {
-  return <section className="relative min-h-screen flex items-center justify-center pt-20">
+  return (
+    <section className="relative min-h-screen flex items-center justify-center pt-20">
       <div className="absolute inset-0">
-        <OptimizedImage src="/lovable-uploads/59f0b476-c26b-420a-a0d6-4ccc0d0b2d2e.png" alt="Geogreatotechnics Team at Work - Drilling Operations" className="w-full h-full" loading="eager" />
+        <OptimizedImage 
+          src="/lovable-uploads/59f0b476-c26b-420a-a0d6-4ccc0d0b2d2e.png" 
+          alt="Geogreatotechnics Team at Work - Drilling Operations" 
+          className="w-full h-full" 
+          loading="eager" 
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/70 to-slate-900/80"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <Badge className="text-white mb-8 text-sm font-medium px-4 py-2 shadow-lg" style={{
-        backgroundColor: 'hsl(var(--primary) / .8)'
-      }}>
-          Leading Geotechnical Engineering in West Africa
+        <Badge className="text-white mb-8 text-xs sm:text-sm font-medium px-3 sm:px-4 py-2 shadow-lg" style={{
+          backgroundColor: 'hsl(var(--primary) / .8)'
+        }}>
+          Leading Geoscience and Engineering Company in West Africa
         </Badge>
         
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">Welcome to GEOGREATOTECHNICS &amp; GEODREELS LTD</h1>
@@ -36,6 +43,8 @@ const HeroSection = () => {
           </Button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
