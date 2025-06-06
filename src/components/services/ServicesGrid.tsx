@@ -1,4 +1,5 @@
-import { Zap, Shield, Drill, Waves, Hammer, Leaf, Droplets, Earth, FlaskConical, Database } from "lucide-react";
+
+import { Zap, Shield, Drill, Waves, Hammer, Leaf, Droplets, Earth, FlaskConical, Database, Sun, Wind, Battery } from "lucide-react";
 import ServiceCard from "./ServiceCard";
 
 const ServicesGrid = () => {
@@ -50,6 +51,42 @@ const ServicesGrid = () => {
         "Reservoir monitoring and management"
       ],
       image: "/lovable-uploads/f81baa2b-0ed8-45a2-8ef5-a6a0e19603af.png"
+    },
+    {
+      icon: <Sun className="h-6 w-6" />,
+      title: "Solar Energy Solutions",
+      description: "Complete solar power system design, installation, and maintenance for industrial and commercial applications.",
+      details: [
+        "Solar farm development and installation",
+        "Grid-connected solar systems",
+        "Off-grid solar solutions with battery storage",
+        "Solar system monitoring and maintenance"
+      ],
+      image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      icon: <Wind className="h-6 w-6" />,
+      title: "Wind Energy Development",
+      description: "Wind energy assessment, turbine installation, and wind farm development for sustainable power generation.",
+      details: [
+        "Wind resource assessment and mapping",
+        "Wind turbine installation and commissioning",
+        "Wind farm planning and development",
+        "Turbine maintenance and optimization"
+      ],
+      image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      icon: <Battery className="h-6 w-6" />,
+      title: "Energy Storage Systems",
+      description: "Advanced battery storage solutions for renewable energy integration and grid stability.",
+      details: [
+        "Battery storage system design",
+        "Grid-scale energy storage solutions",
+        "Hybrid renewable energy systems",
+        "Energy management and optimization"
+      ],
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
     },
     {
       icon: <Zap className="h-6 w-6" />,
