@@ -1,0 +1,142 @@
+
+import { Zap, Shield, Drill, Waves, Hammer, Leaf, Droplets, Earth, FlaskConical, Database } from "lucide-react";
+import ServiceCard from "./ServiceCard";
+
+const ServicesGrid = () => {
+  const services = [
+    {
+      icon: <Droplets className="h-6 w-6" />,
+      title: "Industrial Water Drilling",
+      description: "Professional water drilling services for industrial applications with advanced drilling techniques and equipment.",
+      details: [
+        "Deep borehole drilling and development",
+        "Industrial water supply solutions",
+        "Water quality assessment and testing",
+        "Drilling equipment and maintenance"
+      ],
+      image: "/lovable-uploads/a621e485-0a37-44df-9d73-9e24b082bff4.png"
+    },
+    {
+      icon: <Earth className="h-6 w-6" />,
+      title: "Integrated Geoscience",
+      description: "Comprehensive geoscience solutions combining geological, geophysical, and geochemical analysis for complete subsurface understanding.",
+      details: [
+        "Geological mapping and analysis",
+        "Geophysical surveys and interpretation",
+        "Geochemical analysis and testing",
+        "Integrated subsurface modeling"
+      ],
+      image: "/lovable-uploads/48389c9f-b7c2-49b3-b0ef-6b6043e66c7d.png"
+    },
+    {
+      icon: <FlaskConical className="h-6 w-6" />,
+      title: "Hydrogeological Investigation",
+      description: "Detailed hydrogeological studies to understand groundwater systems, flow patterns, and aquifer characteristics.",
+      details: [
+        "Groundwater exploration and mapping",
+        "Aquifer testing and analysis",
+        "Hydrogeological modeling",
+        "Water resource assessment"
+      ],
+      image: "/lovable-uploads/fb6c55b7-e749-4289-bd8c-c9fae76017e8.png"
+    },
+    {
+      icon: <Database className="h-6 w-6" />,
+      title: "Reservoir Study and Management",
+      description: "Comprehensive reservoir analysis and management solutions for optimal resource extraction and sustainability.",
+      details: [
+        "Reservoir characterization studies",
+        "Production optimization strategies",
+        "Enhanced recovery techniques",
+        "Reservoir monitoring and management"
+      ],
+      image: "/lovable-uploads/cc0c297e-9eff-4ed8-a392-64efebc136b3.png"
+    },
+    {
+      icon: <Zap className="h-6 w-6" />,
+      title: "Electrical Earthing",
+      description: "Comprehensive electrical earthing services to ensure the safety and operational integrity of electrical installations.",
+      details: [
+        "Earthing system design and implementation",
+        "Resistivity testing and analysis",
+        "Lightning protection systems",
+        "Industrial and commercial installations"
+      ],
+      image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      icon: <Shield className="h-6 w-6" />,
+      title: "Pipeline Cathodic Protection",
+      description: "Advanced cathodic protection systems that safeguard pipelines and structures from corrosion.",
+      details: [
+        "Preliminary CP surveys and design",
+        "Anode installation and testing",
+        "Cable cad welding and pin brazing",
+        "Close interval potential surveys (CIPS)"
+      ],
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      icon: <Drill className="h-6 w-6" />,
+      title: "Geophysical & Geotechnical Investigation",
+      description: "Deep insights into subsurface conditions through advanced geophysical and geotechnical analysis.",
+      details: [
+        "2D resistivity and seismic analysis",
+        "Soil thermal resistivity studies",
+        "Borehole drilling and water schemes",
+        "Solar power installations"
+      ],
+      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      icon: <Waves className="h-6 w-6" />,
+      title: "Water Drilling & Solar Systems",
+      description: "Sustainable water supply solutions with solar-powered borehole systems.",
+      details: [
+        "Borehole drilling and development",
+        "Solar power system installation",
+        "Water quality testing and treatment",
+        "Hydrogeological studies"
+      ],
+      image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      icon: <Hammer className="h-6 w-6" />,
+      title: "Civil Construction & Piling",
+      description: "Comprehensive civil engineering and foundation solutions for infrastructure projects.",
+      details: [
+        "Pile foundation design and installation",
+        "Pile integrity testing (PIT)",
+        "Load testing and monitoring",
+        "Marine recovery and diving services"
+      ],
+      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      icon: <Leaf className="h-6 w-6" />,
+      title: "Environmental Services",
+      description: "Comprehensive environmental impact assessments and sustainable project development.",
+      details: [
+        "Environmental Impact Assessments (EIA)",
+        "Environmental monitoring and compliance",
+        "Sustainable project development strategies",
+        "Community engagement and development"
+      ],
+      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80"
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-16">
+          {services.map((service, index) => (
+            <ServiceCard key={index} service={service} index={index} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesGrid;
