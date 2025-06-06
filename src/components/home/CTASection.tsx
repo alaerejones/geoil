@@ -18,7 +18,7 @@ const CTASection = () => {
             </a>
           </Button>
           <Button size="lg" variant="outline" className="border-white bg-white/10 text-white hover:bg-white hover:text-slate-900 text-base px-8 py-4 backdrop-blur-sm">
-            <a href="#" className="flex items-center space-x-2">
+            <a href="/assets/Geogreatotechnics company Profile.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
               <FileText className="h-5 w-5" />
               <span>View Company Profile</span>
             </a>
