@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -36,7 +34,7 @@ const ServicesSection = () => {
       icon: <Database className="h-6 w-6" />,
       title: "Reservoir Study and Management",
       description: "Comprehensive reservoir analysis and management solutions for optimal resource extraction and sustainability.",
-      image: "/assets/images/geotechnical-investigation.jpg"
+      image: "/lovable-uploads/f81baa2b-0ed8-45a2-8ef5-a6a0e19603af.png"
     },
     {
       icon: <Zap className="h-6 w-6" />,
@@ -158,4 +156,3 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
-
