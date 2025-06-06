@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -88,7 +86,7 @@ const ServicesSection = () => {
       case "Geotechnical Investigation":
         return {
           aspectRatio: "aspect-video",
-          objectPosition: "object-cover object-top"
+          objectPosition: "object-cover object-[center_20%]"
         };
       default:
         return {
