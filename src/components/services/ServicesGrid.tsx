@@ -61,7 +61,7 @@ const ServicesGrid = () => {
         "Lightning protection systems",
         "Industrial and commercial installations"
       ],
-      image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/14f2c0dc-0ae2-45af-8719-7e4805c0da71.png"
     },
     {
       icon: <Shield className="h-6 w-6" />,
@@ -85,7 +85,7 @@ const ServicesGrid = () => {
         "Borehole drilling and water schemes",
         "Solar power installations"
       ],
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1541092162384-8987c1d64718?auto=format&fit=crop&w=800&q=80"
     },
     {
       icon: <Waves className="h-6 w-6" />,

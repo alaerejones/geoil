@@ -1,4 +1,5 @@
 
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -41,7 +42,7 @@ const ServicesSection = () => {
       icon: <Zap className="h-6 w-6" />,
       title: "Electrical Earthing",
       description: "Comprehensive electrical earthing services ensuring safety and operational integrity of electrical installations.",
-      image: "/assets/images/electrical-earthing.jpg"
+      image: "/lovable-uploads/14f2c0dc-0ae2-45af-8719-7e4805c0da71.png"
     },
     {
       icon: <Shield className="h-6 w-6" />,
