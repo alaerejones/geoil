@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -81,8 +82,8 @@ const About = () => {
       <section className="relative min-h-screen flex items-center justify-center pt-20">
         <div className="absolute inset-0">
           <OptimizedImage 
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80" 
-            alt="About GGL Engineering Team" 
+            src="/lovable-uploads/d8f0512d-5eda-46c4-ac92-aae837249aad.png" 
+            alt="GGL Engineering Team at Work" 
             className="w-full h-full"
             loading="eager"
           />
