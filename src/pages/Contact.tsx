@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -39,26 +40,30 @@ const Contact = () => {
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Phone",
-      details: ["+234 803 400 3089", "+234 708 765 4321"],
-      action: "Call Us"
+      details: ["+234 803 400 3089"],
+      action: "Call Us",
+      link: "tel:+2348034003089"
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      details: ["info@ggl-ng.com", "projects@ggl-ng.com"],
-      action: "Email Us"
+      details: ["geogreatotechnics@gmail.com"],
+      action: "Email Us",
+      link: "mailto:geogreatotechnics@gmail.com"
     },
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Address",
-      details: ["Lagos Office:", "Victoria Island, Lagos, Nigeria"],
-      action: "Get Directions"
+      details: ["Port Harcourt Office:", "#4 Daba Avenue, Off Airforce Road, Eliozu"],
+      action: "Get Directions",
+      link: "https://maps.google.com/?q=4+Daba+Avenue,+Off+Airforce+Road,+Eliozu,+Port+Harcourt"
     },
     {
       icon: <Clock className="h-6 w-6" />,
       title: "Business Hours",
       details: ["Monday - Friday: 8:00 AM - 6:00 PM", "Saturday: 9:00 AM - 2:00 PM"],
-      action: "Schedule Meeting"
+      action: "Schedule Meeting",
+      link: "https://wa.link/se6ial"
     }
   ];
 
@@ -66,8 +71,8 @@ const Contact = () => {
     <div className="min-h-screen bg-white">
       <SEOHead 
         title="Contact Us"
-        description="Get in touch with GGL for your geotechnical engineering and environmental consulting needs. Contact us via phone, email, or visit our Lagos office."
-        keywords="contact GGL, geotechnical engineering contact Nigeria, environmental consulting contact, engineering services Lagos"
+        description="Get in touch with GGL for your geotechnical engineering and environmental consulting needs. Contact us via phone, email, or visit our Port Harcourt office."
+        keywords="contact GGL, geotechnical engineering contact Nigeria, environmental consulting contact, engineering services Port Harcourt"
       />
       
       <Navigation />
@@ -120,7 +125,11 @@ const Contact = () => {
                       <p key={idx} className="text-base text-slate-600">{detail}</p>
                     ))}
                   </div>
-                  <Button variant="outline" className="hover:bg-red-600 hover:text-white transition-all duration-300 text-sm">
+                  <Button 
+                    variant="outline" 
+                    className="hover:bg-red-600 hover:text-white transition-all duration-300 text-sm"
+                    onClick={() => window.open(info.link, '_blank')}
+                  >
                     {info.action}
                   </Button>
                 </CardContent>
