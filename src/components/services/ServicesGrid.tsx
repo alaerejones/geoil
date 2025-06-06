@@ -1,4 +1,3 @@
-
 import { Zap, Shield, Drill, Waves, Hammer, Leaf, Droplets, Earth, FlaskConical, Database, Sun } from "lucide-react";
 import ServiceCard from "./ServiceCard";
 
@@ -112,7 +111,7 @@ const ServicesGrid = () => {
         "Water quality testing and treatment",
         "Hydrogeological studies"
       ],
-      image: "/lovable-uploads/dde6b7e9-e57a-4d95-bcdf-dbe2f8c57543.png"
+      image: "/lovable-uploads/191ee051-75f6-4dd4-b1bf-08436e89657b.png"
     },
     {
       icon: <Hammer className="h-6 w-6" />,
