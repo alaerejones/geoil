@@ -53,9 +53,9 @@ const About = () => {
       bio: "Dave Adoye leads the Geophysics and Water Resources unit. With over 17 years of field experience and a B.Sc. in Geophysics from Edo State University, he has successfully executed more than 15 solar water projects across Nigeria. He is currently pursuing a Master's degree in Engineering Geology and Hydrology at the University of Port Harcourt. Mr. Adoye is widely respected for pioneering solar borehole solutions in the Niger Delta and is a corporate member of the Nigerian Mining and Geosciences Society (NMGS)."
     },
     {
-      name: "Ochieze Kessington Obinna",
+      name: "Engr. Ochieze Kessington Obinna, COREN",
       role: "Head of Projects & Structural Engineering",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&h=300&q=80",
+      image: "/lovable-uploads/2ce25b60-d6af-42b4-b358-651bfb03c3d1.png",
       bio: "Kessington Ochieze is a seasoned civil/structural engineer and project management expert with over 25 years of professional experience. He has overseen the design and construction of major projects including residential estates, shopping malls, government facilities, and marine terminal structures across the Niger Delta. He holds a B.Eng. in Civil/Structural Engineering from the University of Port Harcourt and is currently pursuing an M.Eng. in Project Management & Construction at UNN. A corporate member of NSE, COREN, and MASE, Ochieze brings hands-on leadership in structural designs, foundation works, and engineering risk analysis."
     },
     {
