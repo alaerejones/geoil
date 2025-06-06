@@ -85,6 +85,11 @@ const ServicesSection = () => {
           aspectRatio: "aspect-[4/3]",
           objectPosition: "object-cover object-center"
         };
+      case "Geotechnical Investigation":
+        return {
+          aspectRatio: "aspect-video",
+          objectPosition: "object-cover object-top"
+        };
       default:
         return {
           aspectRatio: "aspect-video",
