@@ -1,15 +1,19 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
   className?: string;
   loading?: 'lazy' | 'eager';
+  priority?: boolean; // For critical images like logos
 }
 
-const OptimizedImage = ({ src, alt, className = '', loading = 'lazy' }: OptimizedImageProps) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+// Create a simple cache to track loaded images
+const imageCache = new Set<string>();
+
+const OptimizedImage = ({ src, alt, className = '', loading = 'lazy', priority = false }: OptimizedImageProps) => {
+  const [isLoaded, setIsLoaded] = useState(imageCache.has(src));
   const [hasError, setHasError] = useState(false);
 
   // Create optimized src with quality reduction for faster loading
@@ -32,6 +36,27 @@ const OptimizedImage = ({ src, alt, className = '', loading = 'lazy' }: Optimize
 
   const optimizedSrc = getOptimizedSrc(src);
 
+  // Preload critical images
+  useEffect(() => {
+    if (priority && !imageCache.has(optimizedSrc)) {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = optimizedSrc;
+      document.head.appendChild(link);
+    }
+  }, [optimizedSrc, priority]);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
+    imageCache.add(optimizedSrc);
+  };
+
+  const handleError = () => {
+    setHasError(true);
+    setIsLoaded(true);
+  };
+
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {!isLoaded && !hasError && (
@@ -43,18 +68,18 @@ const OptimizedImage = ({ src, alt, className = '', loading = 'lazy' }: Optimize
       <img
         src={optimizedSrc}
         alt={alt}
-        loading={loading}
+        loading={priority ? 'eager' : loading}
         decoding="async"
         className={`w-full h-full object-cover transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
-        onLoad={() => setIsLoaded(true)}
-        onError={() => {
-          setHasError(true);
-          setIsLoaded(true);
-        }}
-        // Preconnect hint for faster loading
+        onLoad={handleLoad}
+        onError={handleError}
         crossOrigin="anonymous"
+        // Add cache-friendly attributes
+        style={{
+          contentVisibility: 'auto',
+        }}
       />
       
       {hasError && (

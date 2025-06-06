@@ -21,7 +21,8 @@ const Footer = () => {
                 src="/geo-uploads/05e99988-5d95-4837-ada7-c15edb9f9ec1.png" 
                 alt="Logo" 
                 className="h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36 object-contain"
-                loading="lazy"
+                loading="eager"
+                priority={true}
               />
             </div>
             <p className="text-slate-400 text-sm -mt-6">
