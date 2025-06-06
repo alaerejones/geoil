@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -87,6 +88,7 @@ const About = () => {
             alt="GGL Engineering Team at Work" 
             className="w-full h-full"
             loading="eager"
+            priority={true}
           />
           <div className="absolute inset-0 bg-slate-900/70"></div>
         </div>
@@ -129,6 +131,7 @@ const About = () => {
                 src="/lovable-uploads/a4406bf3-416a-4114-8b57-3d91a1989e62.png" 
                 alt="GGL Field Team with Drilling Equipment" 
                 className="w-full h-96 rounded-lg shadow-lg"
+                priority={true}
               />
             </div>
           </div>
@@ -183,6 +186,7 @@ const About = () => {
                         src={member.image}
                         alt={member.name}
                         className="w-20 h-20 rounded-full border-4 border-red-100"
+                        priority={index < 2}
                       />
                     </div>
                     <div className="flex-1">
