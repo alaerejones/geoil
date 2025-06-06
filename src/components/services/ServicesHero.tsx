@@ -6,8 +6,8 @@ const ServicesHero = () => {
     <section className="relative min-h-screen flex items-center justify-center pt-20">
       <div className="absolute inset-0">
         <OptimizedImage 
-          src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1920&q=80" 
-          alt="Engineering Services" 
+          src="/lovable-uploads/8da55bf8-bc15-4492-903d-05918a5fa0e9.png" 
+          alt="Engineering Services - Drilling Equipment" 
           className="w-full h-full"
           loading="eager"
         />
