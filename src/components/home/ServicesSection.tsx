@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -46,7 +47,7 @@ const ServicesSection = () => {
       icon: <Shield className="h-6 w-6" />,
       title: "Cathodic Protection",
       description: "Advanced cathodic protection systems to safeguard pipelines and structures from corrosion.",
-      image: "/assets/images/cathodic-protection.jpg"
+      image: "/lovable-uploads/1a54ba12-4f09-4e07-907d-3ac5a13f13f5.png"
     },
     {
       icon: <Drill className="h-6 w-6" />,

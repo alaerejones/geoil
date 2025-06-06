@@ -73,7 +73,7 @@ const ServicesGrid = () => {
         "Cable cad welding and pin brazing",
         "Close interval potential surveys (CIPS)"
       ],
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/1a54ba12-4f09-4e07-907d-3ac5a13f13f5.png"
     },
     {
       icon: <Drill className="h-6 w-6" />,
