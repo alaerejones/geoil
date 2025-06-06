@@ -133,7 +133,7 @@ const ServicesGrid = () => {
         "Water quality testing and treatment",
         "Hydrogeological studies"
       ],
-      image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/dde6b7e9-e57a-4d95-bcdf-dbe2f8c57543.png"
     },
     {
       icon: <Hammer className="h-6 w-6" />,
