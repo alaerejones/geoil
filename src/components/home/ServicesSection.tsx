@@ -54,7 +54,7 @@ const ServicesSection = () => {
       icon: <Drill className="h-6 w-6" />,
       title: "Geotechnical Investigation",
       description: "Deep insights into subsurface conditions through 2D resistivity, seismic analysis, and soil studies.",
-      image: "/assets/images/geotechnical-investigation.jpg"
+      image: "/lovable-uploads/4c1ff37e-aa52-4e7e-bce7-0ca36e1c2af4.png"
     }
   ];
 

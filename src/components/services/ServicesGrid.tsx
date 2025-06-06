@@ -85,7 +85,7 @@ const ServicesGrid = () => {
         "Borehole drilling and water schemes",
         "Solar power installations"
       ],
-      image: "https://images.unsplash.com/photo-1541092162384-8987c1d64718?auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/4c1ff37e-aa52-4e7e-bce7-0ca36e1c2af4.png"
     },
     {
       icon: <Waves className="h-6 w-6" />,
